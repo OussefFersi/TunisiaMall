@@ -1,0 +1,192 @@
+{%extends "TMallVendorBundle::layout.html.twig"%}
+
+{% block navbar %}
+    
+    
+  <div class="navbar">
+
+  <div class="top-bar">
+  
+	<div class="row">
+  
+		<div class="pull-left visible-xs visible-sm padding_5 left_padding_15">
+			<a href="javascript:ShowHide('nav_menu')" class="expand_menu_link"><img src="{{asset('vendor/images/menu-grid.gif')}}" alt="expand menu"/> &nbsp; Menu</a>
+		</div>
+		<div class="clearfix"></div>
+        <div id="nav_menu" class="navbar-collapse">
+          <ul class="main-top-menu nav navbar-nav">
+            
+<li class="dropdown"><a class="main-top-link" href="{{path('t_mall_vendor_homepage')}}">Home</a>
+
+</li>
+<li class="dropdown"><a class="main-top-link" href="{{path('t_mall_client_listBoutique')}}">Create Store</a>
+
+</li>
+<li class="dropdown"><a class="main-top-link" href="">Stores</a>
+
+</li>
+<li class="dropdown"><a class="main-top-link" href="{{path('t_mall_vendor_approve')}}">Orders</a>
+<ul class="text-left dropdown-menu">
+<li ondragstart="javascript:dragStart()" id="orders-approve" class="menu-sub-link"><a href="{{path('t_mall_vendor_approve')}}">New Orders</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-rejected" class="menu-sub-link"><a href="{{path('t_mall_vendor_rejected')}}">Rejected Orders</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-approved" class="menu-sub-link"><a href="{{path('t_mall_vendor_approved')}}">Approved Orders</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-customers" class="menu-sub-link"><a href="">Customers</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-coupons" class="menu-sub-link"><a href="{{path('t_mall_vendor_addCoupons')}}">Coupons</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-points" class="menu-sub-link"><a href="">Customer Loyalty Program</a></li>
+</ul>
+</li>
+
+
+<li class="dropdown"><a class="main-top-link" href="">Statistics</a>
+<ul class="text-left dropdown-menu">
+<li ondragstart="javascript:dragStart()" id="statistics-reports" class="menu-sub-link"><a href="">Reports</a></li>
+<li ondragstart="javascript:dragStart()" id="statistics-orders" class="menu-sub-link"><a href="">Orders</a></li>
+
+</ul>
+</li>
+		 </ul>
+					
+        </div>  
+	
+	</div>
+	
+  </div>
+</div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+{% endblock %}
+{% block container %}
+
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<h1>Add a new Coupon</h1>
+
+ 
+    {# ... #}
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+    <div class="form-group">
+    
+        {{ form_label(form.idCategorie) }}
+        {{ form_errors(form.idCategorie) }}
+        {{ form_widget(form.idCategorie) }}
+    
+    </div>
+    <div class="form-group">
+    
+        {{ form_label(form.code) }}
+        {{ form_errors(form.code) }}
+        {{ form_widget(form.code) }}
+    
+    </div>
+    
+    <div class="form-group">
+    
+        {{ form_label(form.discount) }}
+        {{ form_errors(form.discount) }}
+        {{ form_widget(form.discount) }}
+     
+    </div>
+        
+        
+        <div class="form-group">
+    
+        {{ form_label(form.description) }}
+        {{ form_errors(form.description) }}
+        {{ form_widget(form.description) }}
+     
+    </div>
+        
+      
+        
+         
+        
+{{ form_end(form) }}
+	
+
+
+<h3> your current coupons </h3>
+
+
+                <table class="table" style="width :100%">
+    
+        <th>Category</th>
+        <th>Code</th>
+        <th> Discount % </th>
+        <th>Description</th>
+        
+        
+        {% for coupon in pagination %}
+ 
+    
+    <tr data-id="{{coupon.id}}">
+    <td> {{coupon.idCategorie.getNom()}} </td> <br/>
+    <td> {{coupon.code}} </td> <br/>
+    <td>   {{coupon.discount}}   </td><br/>
+    <td>   {{coupon.description}}   </td><br/>
+    
+        <td> <a href="{{path('tmall_vendor_rejectCoupon',{'id':coupon.id})}}" name="Rejected" class="btn btn-danger">Delete</a></td> <br/>
+
+    
+    
+    </tr>
+    
+
+    {% endfor %}
+    
+  
+    </table>  
+
+    
+    
+    
+    
+    
+    
+       
+    {# display navigation #}
+<div class="navigation">
+    {{ knp_pagination_render(pagination) }}
+</div>
+
+
+
+
+
+
+
+
+	<a class="small-tile green-back" href="{{path('tmall_vendor_listCoupon')}}"><img class="pull-right" width="32" src="{{asset('vendor/images/icons/approved.png')}}"><h3 class="h3-tile">liste Coupons</h3>
+
+
+
+<script src="{{asset('js/bootstrap.min.js')}}"> </script>
+<script src="{{asset('js/jquery.js')}}"> </script>
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+

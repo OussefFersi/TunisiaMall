@@ -1,0 +1,123 @@
+{% extends "TMallVendorBundle::layout.html.twig" %}
+
+{% block navbar %}
+    
+    
+  <div class="navbar">
+
+  <div class="top-bar">
+  
+	<div class="row">
+  
+		<div class="pull-left visible-xs visible-sm padding_5 left_padding_15">
+			<a href="javascript:ShowHide('nav_menu')" class="expand_menu_link"><img src="{{asset('vendor/images/menu-grid.gif')}}" alt="expand menu"/> &nbsp; Menu</a>
+		</div>
+		<div class="clearfix"></div>
+        <div id="nav_menu" class="navbar-collapse">
+          <ul class="main-top-menu nav navbar-nav">
+            
+<li class="dropdown"><a class="main-top-link" href="{{path('t_mall_vendor_homepage')}}">Home</a>
+
+</li>
+<li class="dropdown"><a class="main-top-link" href="{{path('t_mall_client_listBoutique')}}">Create Store</a>
+
+</li>
+<li class="dropdown"><a class="main-top-link" href="">Stores</a>
+
+</li>
+<li class="dropdown"><a class="main-top-link" href="{{path('t_mall_vendor_approve')}}">Orders</a>
+<ul class="text-left dropdown-menu">
+<li ondragstart="javascript:dragStart()" id="orders-approve" class="menu-sub-link"><a href="{{path('t_mall_vendor_approve')}}">New Orders</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-rejected" class="menu-sub-link"><a href="{{path('t_mall_vendor_rejected')}}">Rejected Orders</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-approved" class="menu-sub-link"><a href="{{path('t_mall_vendor_approved')}}">Approved Orders</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-customers" class="menu-sub-link"><a href="">Customers</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-coupons" class="menu-sub-link"><a href="{{path('t_mall_vendor_addCoupons')}}">Coupons</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-points" class="menu-sub-link"><a href="">Customer Loyalty Program</a></li>
+</ul>
+</li>
+
+
+<li class="dropdown"><a class="main-top-link" href="">Statistics</a>
+<ul class="text-left dropdown-menu">
+<li ondragstart="javascript:dragStart()" id="statistics-reports" class="menu-sub-link"><a href="">Reports</a></li>
+<li ondragstart="javascript:dragStart()" id="statistics-orders" class="menu-sub-link"><a href="">Orders</a></li>
+
+</ul>
+</li>
+		 </ul>
+					
+        </div>  
+	
+	</div>
+	
+  </div>
+</div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+{% endblock %}
+
+{% block container %}
+
+
+<div class="container">	
+	
+	<div id="main_content" class="text-left col-md-12 min-height-300">
+		
+		
+<div class="fright">
+	<a class="small-tile green-back" href="{{path('tmall_vendor_approveOrder')}}"><img class="pull-right" width="32" src="{{asset('vendor/images/icons/approve.png')}}"><h3 class="h3-tile">New Orders</h3>
+
+	</a></div>
+<div class="clear"></div>
+
+
+<h3>List of the approved orders</h3>
+
+
+<br>
+
+            <table class="table" style="width :100%">
+    
+        <th>Name Product</th>
+        <th>Name User</th>
+        <th> Date </th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th></th>
+        {% for commande in pagination %}
+ 
+    
+    <tr>
+    <td> {{commande.idProduit.getTitre()}} </td> <br/>
+    <td> {{commande.idUser.getNom()}} </td> <br/>
+    <td>   {{commande.date|date('d/m/Y')}}   </td><br/>
+    <td>   {{commande.prix}}   </td><br/>
+    <td>   {{commande.quantite}}   </td><br/>
+<td> <a href="{{path('tmall_vendor_rejectOrder',{'id':commande.id})}}" name="Rejected" class="btn btn-danger">Reject</a></td> <br/>
+
+
+{% endfor %}
+  {# display navigation #}
+<div class="navigation">
+    {{ knp_pagination_render(pagination) }}
+</div>
+
+				
+		
+
+
+        </div>
+
+{% endblock %}

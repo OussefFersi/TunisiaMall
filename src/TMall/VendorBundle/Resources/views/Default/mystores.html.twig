@@ -1,0 +1,123 @@
+{%extends "TMallVendorBundle::layout.html.twig"%}
+
+{% block navbar %}
+    
+    
+  <div class="navbar">
+
+  <div class="top-bar">
+  
+	<div class="row">
+  
+		<div class="pull-left visible-xs visible-sm padding_5 left_padding_15">
+			<a href="javascript:ShowHide('nav_menu')" class="expand_menu_link"><img src="{{asset('vendor/images/menu-grid.gif')}}" alt="expand menu"/> &nbsp; Menu</a>
+		</div>
+		<div class="clearfix"></div>
+        <div id="nav_menu" class="navbar-collapse">
+          <ul class="main-top-menu nav navbar-nav">
+            
+<li class="dropdown"><a class="main-top-link" href="{{path('front')}}">Home</a>
+
+</li>
+<li class="dropdown"><a class="main-top-link" href="{{path('t_mall_client_listBoutique')}}">Create Store</a>
+
+</li>
+
+<li class="dropdown"><a class="main-top-link" href="{{path('t_mall_vendor_approve')}}">Orders</a>
+<ul class="text-left dropdown-menu">
+<li ondragstart="javascript:dragStart()" id="orders-approve" class="menu-sub-link"><a href="{{path('t_mall_vendor_approve')}}">New Orders</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-rejected" class="menu-sub-link"><a href="{{path('t_mall_vendor_rejected')}}">Rejected Orders</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-approved" class="menu-sub-link"><a href="{{path('t_mall_vendor_approved')}}">Approved Orders</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-customers" class="menu-sub-link"><a href="">Customers</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-coupons" class="menu-sub-link"><a href="{{path('t_mall_vendor_addCoupons')}}">Coupons</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-points" class="menu-sub-link"><a href="">Customer Loyalty Program</a></li>
+</ul>
+</li>
+
+
+<li class="dropdown"><a class="main-top-link" href="">Statistics</a>
+<ul class="text-left dropdown-menu">
+<li ondragstart="javascript:dragStart()" id="statistics-reports" class="menu-sub-link"><a href="">Reports</a></li>
+<li ondragstart="javascript:dragStart()" id="statistics-orders" class="menu-sub-link"><a href="">Orders</a></li>
+
+</ul>
+</li>
+		 </ul>
+					
+        </div>  
+	
+	</div>
+	
+  </div>
+</div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+{% endblock %}
+{% block container %}
+
+    
+<div class="container">    
+    
+    
+   
+   <div class="text-left no-left-padding col-md-9 min-height-300">  
+       
+       
+		<h3>List De Mes Boutique</h3>
+<hr class="hr-margin"/>
+
+<div class="separator clear"></div>
+    {% for boutique in pagination %}
+ 
+    <div class="col-md-4 no-left-right">
+<div class="product featured-product">
+				 <a href="">
+			<div class="image-wrap">
+	<div class="product-image">
+					
+					  <img src="{{ asset(boutique.getWebPath) }}" class="thumb-image " width="150" alt="" />
+				
+				 </div> </div>
+			
+				<div class="product-description">
+				<div class="product-name"><a>{{boutique.nom}}</a></div>
+                                <h4>{{boutique.cordonne}}</h4>
+	
+					<hr class="top-bottom-10"/>
+					
+				<br/><br/>
+ 
+
+
+<a href="{{path('produit',{'id':boutique.id})}}" class="btn btn-primary">View Product</a>
+<a href="{{path('produit_new',{'id':boutique.id})}}" class="btn btn-primary">Add Product</a>
+				</div>	
+
+		</div>	</div>
+   
+    
+
+    {% endfor %}
+    
+  	</div> 
+      
+    
+    
+      <div class="navigation" style="padding-right: 20">
+    {{ knp_pagination_render(pagination) }}
+</div>
+</div>  
+    
+    {% endblock %}

@@ -1,0 +1,22 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block title %}<title>GoVoyage | Sign in</title>{% endblock %}
+{% block body %}
+    
+    <div class="content">
+        <div id="middle">
+
+            <h3 class="widget-title">Liste des choix :</h3>
+            <ul>
+                
+                
+                <li><a href="{{ path('fos_user_profile_edit') }}">Edit profile</a></li>           
+                <li><a href="{{ path('fos_user_change_password') }}">Change password</a></li>
+                
+            </ul>
+        </div>
+                </div>
+{% block fos_user_content %}
+{% include "FOSUserBundle:Profile:show_content.html.twig" %}
+{% endblock fos_user_content %}
+{% endblock %}

@@ -1,0 +1,56 @@
+{%extends "TMallClientBundle::layout.html.twig"%}
+{% block content %}
+
+    
+    
+    
+    
+   
+   <div class="text-left no-left-padding col-md-9 min-height-300">  
+       
+       
+		<h3>List Des Boutique</h3>
+<hr class="hr-margin"/>
+
+<div class="separator clear"></div>
+    {% for boutique in pagination %}
+ 
+    <div class="col-md-4 no-left-right">
+<div class="product featured-product">
+				 <a href="{{path('t_mall_client_home',{'id':boutique.id})}}">
+			<div class="image-wrap">
+	<div class="product-image">
+					
+					  <img src="{{ asset(boutique.getWebPath) }}" class="thumb-image " width="150" alt="" />
+				
+				 </div> </div>
+			
+				<div class="product-description">
+				<div class="product-name">{{boutique.nom}}</div>
+</a>
+	
+					<hr class="top-bottom-10"/>
+					
+				<br/><br/>
+ 
+
+
+
+				</div>	
+
+		</div>	</div>
+   
+    
+
+    {% endfor %}
+    
+  	</div> 
+      
+    
+    
+      <div class="navigation" style="padding-right: 20">
+    {{ knp_pagination_render(pagination) }}
+</div>
+    
+    
+    {% endblock %}

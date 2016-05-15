@@ -1,0 +1,85 @@
+t_mall_vendor_homepage:
+    path:     /
+    defaults: { _controller: TMallVendorBundle:Default:index }
+
+
+    
+t_mall_vendor_product1:
+    resource: "@TMallVendorBundle/Resources/config/product.yml"
+    prefix:   /product1
+    
+
+t_mall_vendor_products:
+    path:     /products
+    defaults: { _controller: TMallVendorBundle:Default:products }
+
+
+t_mall_vendor_approve:
+    path:     /approve
+    defaults: { _controller: TMallVendorBundle:Default:listOrders }
+
+t_mall_vendor_rejected:
+    path:     /rejected
+    defaults: { _controller: TMallVendorBundle:Default:rejected }
+
+t_mall_vendor_approved:
+    path:     /approved
+    defaults: { _controller: TMallVendorBundle:Default:approved }
+
+
+
+
+
+
+t_mall_vendor_addOrder:
+    path:     /addOrder
+    defaults: { _controller: TMallVendorBundle:Default:addOrder }
+
+t_mall_vendor_listOrders:
+    path:     /listOrders
+    defaults: { _controller: TMallVendorBundle:Default:listOrders }
+
+tmall_vendor_approveOrder:
+     path:     /approve
+     defaults: { _controller: TMallVendorBundle:Default:approve }
+
+tmall_vendor_editOrder:
+     path:     /{id}/editOrder
+     defaults: { _controller: TMallVendorBundle:Default:editOrder }
+     
+tmall_vendor_rejectOrder:
+     path:     /supprimerOrder/{id}
+     defaults: { _controller: TMallVendorBundle:Default:supprimerOrder }
+   
+tmall_vendor_affirmOrder:
+     path:     /affirmerOrder/{id}
+     defaults: { _controller: TMallVendorBundle:Default:affirmerOrder }     
+tmall_vendor_showPDF:
+    path:   /{id}/showPDF
+    defaults: { _controller: TMallVendorBundle:Default:showPDF }
+  
+t_mall_vendor_addCoupons:
+    path:     /coupons
+    defaults: { _controller: TMallVendorBundle:Default:addCoupon }     
+ 
+tmall_vendor_rejectCoupon:
+     path:     /rejectCoupon/{id}
+     defaults: { _controller: TMallVendorBundle:Default:rejectCoupon } 
+     
+tmall_vendor_listCoupon:
+      path:     /listCoupon
+      defaults: { _controller: TMallVendorBundle:Default:listCoupons } 
+      
+tmall_vendor_deleteOrder:
+     path:     /deleteOrder/{id}
+     defaults: { _controller: TMallVendorBundle:Default:deleteOrder }
+
+
+tmall_vendor_MyStores:
+      path:     /myStores
+      defaults: { _controller: TMallVendorBundle:Default:mystores } 
+
+t_mall_client_listBoutique:
+       path:     /createstore
+       defaults: { _controller: TMallClientBundle:Default:create_store }      
+

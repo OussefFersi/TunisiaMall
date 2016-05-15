@@ -1,0 +1,89 @@
+{%extends "TMallClientBundle::layout.html.twig"%}
+{% block content %}
+    {% set Total = 0 %}
+     {% set idb = 0 %}
+<div class="text-left no-left-padding col-md-9 min-height-300">
+		
+		
+	<div class="separator clear"></div>
+	<br/>
+
+
+	<div class="separator clear"></div>
+	<br/>
+
+<B><i><h1 style="color: #08c">Your Products :</h1></i></B>
+</br>
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+  <thead>
+	  <tr>
+		
+		<th>Product</th>
+        <th>Price</th>
+		<th>Quantity</th>
+		<th>Total</th>
+                <th>Remove</th>
+	</tr>
+	</thead>
+	<tbody>
+          
+            {% for panier in paniers %}
+	<form action="{{ path('t_mall_client_ajouter', { 'id' : panier.id }) }}" method="get">
+            
+		  
+	<tr>
+		
+		<td>{{ panier.ID_P.titre }}</td>
+                <td>{{ panier.ID_P.prix }}</td>	
+                <td>{{panier.Qte}}</td>
+         <td>{{ panier.ID_P.prix*panier.Qte }}</td>
+	<td><a class="btn btn-default" href="{{ path('t_mall_client_supprimer', { 'id' : panier.id }) }}">remove</a></td>
+        </tr>
+	  
+	
+	
+			
+		
+		</form>  
+            
+            {% set Total = Total + (panier.ID_P.prix *panier.Qte) %}
+             {% set idb = panier.ID_P.boutique.id%}
+            {% endfor %} 
+	</tbody>
+</table>
+
+
+</div>
+
+<span class="price_style pull-left">Total à payer : {{Total}} € </span>
+  
+<div class="clear"></div>
+<br><br>
+<div class="r-margin-18 pull-left"><form action="{{path('t_mall_client_home',{'id':idb})}}" method="post"><input type="hidden" name="lang" value="en">
+		
+			<input type=submit value=" Continue Shopping " class="btn btn-default btn-md btn-gradient"/>
+		</form>
+		</div>
+<div class="pull-left">
+    
+    <button data-sc-key="sbpb_YjU0MWNjZTAtMDliNS00ODg1LTg5YzEtYWExN2NhYjBhZWM5"
+        data-name="Tunisia Mall"
+        data-description="purchased by {{ app.user.username }} "
+        data-reference="99999"
+        data-amount="{{Total}}"
+        data-color="#0000FF"
+        class="btn btn-primary btn-md"
+        >
+        Buy Now
+    </button>
+    
+		</div>
+	<div class="separator clear"></div>
+	<br/>
+<div class="clear"></div>
+<br/><br/>
+		
+		</div> 
+	{% endblock %}

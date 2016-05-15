@@ -1,0 +1,64 @@
+{% extends "TMallVendorBundle::layout.html.twig" %}
+
+
+
+{% block navbar %}
+    
+    
+  <div class="navbar">
+
+  <div class="top-bar">
+  
+	<div class="row">
+  
+		<div class="pull-left visible-xs visible-sm padding_5 left_padding_15">
+			<a href="javascript:ShowHide('nav_menu')" class="expand_menu_link"><img src="{{asset('vendor/images/menu-grid.gif')}}" alt="expand menu"/> &nbsp; Menu</a>
+		</div>
+		<div class="clearfix"></div>
+        <div id="nav_menu" class="navbar-collapse">
+          <ul class="main-top-menu nav navbar-nav">
+            
+<li class="dropdown"><a class="main-top-link" href="{{path('tmall_vendor_MyStores')}}">Stores</a>
+
+</li>
+
+
+
+
+
+
+		 </ul>
+					
+        </div>  
+	
+	</div>
+	
+  </div>
+</div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+{% endblock %}
+{% block container %}
+    
+    <div class="container">	
+	
+	<div id="main_content" class="text-left col-md-12 min-height-300">
+    <h1>Product creation</h1>
+
+    {{ form(form) }}
+
+       
+        </div></div>
+{% endblock %}

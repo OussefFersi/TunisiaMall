@@ -1,0 +1,34 @@
+produit:
+    path:     /list/{id}
+    defaults: { _controller: "TMallVendorBundle:produit:index" }
+
+produit_show:
+    path:     /{id}/show
+    defaults: { _controller: "TMallVendorBundle:produit:show" }
+
+produit_new:
+    path:     /new/{id}
+    defaults: { _controller: "TMallVendorBundle:produit:new" }
+
+produit_create:
+    path:     /create
+    defaults: { _controller: "TMallVendorBundle:produit:create" }
+    requirements: { _method: post|get }
+
+produit_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "TMallVendorBundle:produit:edit" }
+
+produit_update:
+    path:     /{id}/update
+    defaults: { _controller: "TMallVendorBundle:produit:update" }
+    requirements: { _method: post|put }
+
+produit_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "TMallVendorBundle:produit:delete" }
+    requirements: { _method: post|delete }
+
+produit_recherche:
+    path:     /recherche
+    defaults: { _controller: "TMallVendorBundle:produit:recherchetraitement" }

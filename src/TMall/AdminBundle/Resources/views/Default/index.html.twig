@@ -1,0 +1,330 @@
+{% extends "TMallClientBundle::admin_layout.html.twig" %}
+{% block  content %}
+
+        <div id="page-wrapper">
+            <div class="row">
+				<div class="col-lg-12" id="main-content">
+				<!--main content area-->
+			
+                 <div class="row">
+	<div class="col-lg-3 col-md-6">
+		<div class="panel panel-info">
+		<div class="panel-heading">
+				<div class="row">
+					<div class="col-xs-3">
+						<i class="white-link fa fa-shopping-cart fa-5x"></i>
+					</div>
+					
+					<div class="col-xs-9 text-right">
+						<div class="huge">10</div>
+						<div>Products</div>
+					</div>
+				</div>
+			</div>
+			<a href="#products_manager-products">
+			
+				<div class="panel-footer">
+					<span class="pull-left">View Details</span>
+					<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+					<div class="clearfix"></div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6">
+		<div class="panel panel-green">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-xs-3">
+						<i class="fa fa-users fa-5x"></i>
+					</div>
+					<div class="col-xs-9 text-right">
+						<div class="huge">3</div>
+						<div>Vendors</div>
+					</div>
+				</div>
+			</div>
+			<a href="#stores-users">
+				<div class="panel-footer">
+					<span class="pull-left">View Details</span>
+					<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+					<div class="clearfix"></div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6">
+		<div class="panel panel-yellow">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-xs-3">
+						<i class="fa fa-institution fa-5x"></i>
+					</div>
+					<div class="col-xs-9 text-right">
+						<div class="huge">44</div>
+						<div>Orders</div>
+					</div>
+				</div>
+			</div>
+			<a href="#orders-orders">
+				<div class="panel-footer">
+					<span class="pull-left">View Details</span>
+					<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+					<div class="clearfix"></div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6">
+		<div class="panel panel-red">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-xs-3">
+						<i class="fa fa-bar-chart-o fa-5x"></i>
+					</div>
+					<div class="col-xs-9 text-right">
+						<div class="huge">9</div>
+						<div>Website Visits</div>
+					</div>
+				</div>
+			</div>
+			<a href="#statistics-reports">
+				<div class="panel-footer">
+					<span class="pull-left">View Details</span>
+					<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+					<div class="clearfix"></div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+
+<div class="col-lg-12">
+ <div class="panel panel-default">
+	<div class="panel-heading">
+		Latest Vendors	</div>
+	
+	<div style="padding:10px" class="btn-block">
+	<div class="xpanel-body">
+		<div class="table-responsive">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Username</th>
+						<th>Company</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						
+						<th>Package</th>
+					</tr>
+				</thead>
+				<tbody>
+									<tr onclick="document.location.href='index.php?category=stores&folder=users&page=edit&id=24'" style="cursor: pointer">
+						<td>2 months ago</td>
+						<td>manappr</td>
+						<td>manappr</td>
+						<td>manappr</td>
+						<td>manappr</td>
+						<td>Test Package 1</td>
+					</tr>
+									<tr onclick="document.location.href='index.php?category=stores&folder=users&page=edit&id=23'" style="cursor: pointer">
+						<td>4 months ago</td>
+						<td>mytest</td>
+						<td>Test Company</td>
+						<td>Anton</td>
+						<td>Testing</td>
+						<td>Test Package 1</td>
+					</tr>
+									<tr onclick="document.location.href='index.php?category=stores&folder=users&page=edit&id=14'" style="cursor: pointer">
+						<td>1 year ago</td>
+						<td>bestcameras</td>
+						<td>Best Cameras</td>
+						<td>fdg</td>
+						<td>dfg</td>
+						<td>Test Package 1</td>
+					</tr>
+								</tbody>
+			</table>
+		</div>
+		<!-- /.table-responsive -->
+	</div>
+	
+		<a href="#stores-users" class="btn btn-default btn-block">View All Vendors</a>
+	</div>
+	<!-- /.panel-body -->
+</div>
+</div>
+
+</div>
+
+
+<div class="row">
+<div class="col-lg-8">
+	
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Order Statistics	</div>
+	
+	<div class="panel-body">
+		<div class="flot-chart">
+			<div class="flot-chart-content" id="flot-bar-chart"></div>
+		</div>
+	</div>
+	
+</div>
+
+	
+</div>
+ 
+	 <div class="col-lg-4">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<i class="fa fa-bell fa-fw"></i> Latest Orders			</div>
+			
+			<div class="panel-body">
+				<div class="list-group">
+								
+					<a href="index.php?category=orders&action=details&id=44" class="list-group-item">
+					
+						$149.00,
+						<i class="fa fa-user"></i>
+						
+						mytest						
+						<span class="pull-right text-muted small"><em>2 months ago</em>
+						</span>
+					</a>
+								
+					<a href="index.php?category=orders&action=details&id=39" class="list-group-item">
+					
+						$149.00,
+						<i class="fa fa-user"></i>
+						
+						mytest						
+						<span class="pull-right text-muted small"><em>2 months ago</em>
+						</span>
+					</a>
+								
+					<a href="index.php?category=orders&action=details&id=37" class="list-group-item">
+					
+						$99.00,
+						<i class="fa fa-user"></i>
+						
+						atnsolutions						
+						<span class="pull-right text-muted small"><em>7 months ago</em>
+						</span>
+					</a>
+								
+					<a href="index.php?category=orders&action=details&id=36" class="list-group-item">
+					
+						$25.2,
+						<i class="fa fa-user"></i>
+						
+						bestcameras						
+						<span class="pull-right text-muted small"><em>9 months ago</em>
+						</span>
+					</a>
+								
+					<a href="index.php?category=orders&action=details&id=35" class="list-group-item">
+					
+						$20.00,
+						<i class="fa fa-user"></i>
+						
+						bestcameras						
+						<span class="pull-right text-muted small"><em>9 months ago</em>
+						</span>
+					</a>
+								
+					<a href="index.php?category=orders&action=details&id=34" class="list-group-item">
+					
+						$21.2,
+						<i class="fa fa-user"></i>
+						
+						bestcameras						
+						<span class="pull-right text-muted small"><em>9 months ago</em>
+						</span>
+					</a>
+								
+					<a href="index.php?category=orders&action=details&id=33" class="list-group-item">
+					
+						$20.00,
+						<i class="fa fa-user"></i>
+						
+						bestcameras						
+						<span class="pull-right text-muted small"><em>9 months ago</em>
+						</span>
+					</a>
+								
+					<a href="index.php?category=orders&action=details&id=32" class="list-group-item">
+					
+						$20.00,
+						<i class="fa fa-user"></i>
+						
+						bestcameras						
+						<span class="pull-right text-muted small"><em>9 months ago</em>
+						</span>
+					</a>
+								</div>
+				
+				<a href="#orders-orders" class="btn btn-default btn-block">View All Orders</a>
+			</div>
+		</div>
+	</div>
+	
+</div>			
+			
+	
+
+
+	
+<script src="js/plugins/flot/jquery.flot.js"></script>
+<script src="js/plugins/flot/jquery.flot.categories.js"></script>
+
+
+<script type="text/javascript">
+
+	$(function() {
+
+		if(document.getElementById("flot-bar-chart"))
+		{
+			
+			var data = [["September 9",7], ["September 8",35], ["September 25",10], ["September 23",49], ["September 19",995], ["September 1",4.5], ["October 21",99]];
+			
+		$.plot("#flot-bar-chart", [ data ], {
+			series: {
+				bars: {
+					show: true,
+					barWidth: 0.6,
+					align: "center"
+				}
+			},
+			xaxis: {
+				mode: "categories",
+				tickLength: 0
+			},
+			yaxis: 
+			{
+			tickFormatter: function(val, axis) { return val < axis.max ? val.toFixed(2) : "$ / Day";}
+			}
+		});
+		}
+
+	});
+
+	</script>	
+		
+	
+		
+		
+               
+			   <!--end main content area-->
+				</div>
+            </div>
+           
+        </div>
+ 
+
+
+{% endblock %}

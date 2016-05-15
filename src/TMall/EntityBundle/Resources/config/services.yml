@@ -1,0 +1,4 @@
+services:
+#    t_mall_entity.example:
+#        class: TMall\EntityBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

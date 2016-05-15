@@ -1,0 +1,36 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+
+{% block body %}
+
+    <div class="content">
+        <div id="middle">
+
+            <h3 class="widget-title">Meta</h3>
+            <ul>
+                
+                <li><a href="{{ path('fos_user_profile_show') }}">View profile</a></li>
+                         
+                <li><a href="{{ path('fos_user_change_password') }}">Change password</a></li>
+                
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div id="middle "class="container_12" >
+            <div class="inner">    
+                <!-- login widget -->
+                <div class="widget-container widget_login">
+                    <h3>Registration</h3>
+
+                    {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
+                    {{ form_widget(form) }}
+                    <div>
+                        <input type="submit" value="{{ 'profile.edit.submit'|trans }}" id="wp-submit" class="btn-submit" value="Login" tabindex="100"/>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

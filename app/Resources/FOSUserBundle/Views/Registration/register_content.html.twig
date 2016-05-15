@@ -1,0 +1,27 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block body %}
+    
+    
+    <div class="container">
+        <div id="middle "class="container_12" >
+            <div class="inner">    
+                <!-- login widget -->
+                <div class="widget-container widget_login">
+                    <h3>Créer votre compte :</h3>
+
+                    {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+                    {{ form_widget(form) }}
+                    <div>
+                        <input type="submit" value="{{ 'registration.submit'|trans }}" id="wp-submit" class="btn-submit" value="Login" tabindex="100"  />
+                    </div>
+                    {{ form_end(form) }}
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

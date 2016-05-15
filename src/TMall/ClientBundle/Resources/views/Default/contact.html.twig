@@ -1,0 +1,62 @@
+{%extends "TMallClientBundle::layout.html.twig"%}
+{% block content %}
+    
+   
+<div class="text-left no-left-padding col-md-9 min-height-300">
+    
+    <p style="text-align: center " > <B><i><h1 style="color: #08c">Reclamtion : </h1></i></B>	</p>
+         {% if message!=null %}
+         <span class="btn btn-success" style="margin-left:300px">{{message}}</span>
+         
+   {% elseif message2!=null  %}
+       <span class="btn btn-danger" style="margin-left:300px">{{message2}}</span>
+         {% endif %}
+         <br/>
+         <br/>
+       
+         
+<form id="main" action="{{ path('t_mall_client_mail')}}" method="POST"  enctype="multipart/form-data">
+			<input type="hidden" name="page" value="en_Contact"/>
+		
+	<input type="hidden" name="SubmitContact" value="1"/>
+	<fieldset>
+		<legend>please enter your message :</legend>
+		<ol>
+			<li>
+				<label for="subject">Subject : 
+				<br>
+				
+				</label>
+				<input id="subject"  name="subject" placeholder="" type="text" required/>
+			
+			</li>
+                        <li>
+                            <label for="subject" >Your mail  <image src="http://www.geeky-gadgets.com/wp-content/uploads/2012/03/Gmail-iOS-App.jpg" width="50" height="20" />
+				<br>
+				
+				</label>
+				<input id="subject"  name="mail" placeholder="" type="text" required/>
+			
+			</li>
+			<li>
+				<label for="description">Reclamation : 
+				<br>
+				
+				</label>
+				<textarea id="message" name="reclamation" rows="8" required></textarea>
+			
+                        </li>
+                       
+                <button class="btn btn-primary pull-right" type="submit">Submit</button>        
+                       
+</form>
+    
+
+    
+
+ 
+		
+		</div> 
+                
+    
+{% endblock %}

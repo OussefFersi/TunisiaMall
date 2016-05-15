@@ -1,0 +1,93 @@
+
+{%extends "TMallClientBundle::layout.html.twig"%}
+{% block content %}
+	<div class="text-left no-left-padding col-md-9 min-height-300">
+		
+		
+<script>
+
+function ValueChanged(x)
+{
+	document.location.href="index6409.html?mod=details&amp;lang=en&amp;id=&amp;id=22&amp;item="+x.options[x.selectedIndex].value;
+}
+
+</script>
+
+
+ 
+
+<a rel="nofollow" href="http://plus.google.com/share?url=http://www.quixstore.com/product-sony-dschx-mp-22.html" target="_blank"><img src="{{asset('Client/images/googleplus.gif')}}" width="18" height="18" class="pull-right share-icon" alt=""/></a>
+<a rel="nofollow" href="http://www.twitter.com/intent/tweet?text=Sony+DSC-HX50%2C+18MP%2C+Wi-Fi&amp;url=http://www.quixstore.com/product-sony-dschx-mp-22.html" target="_blank"><img src="{{asset('Client/images/twitter.gif')}}" width="18" height="18" class="pull-right  share-icon" alt=""/></a>
+<a rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://www.quixstore.com/product-sony-dschx-mp-22.html" target="_blank"><img src="{{asset('Client/images/facebook.gif')}}" width="18" height="18" alt="" class="pull-right share-icon"/></a>
+ 
+
+<h3>Sony DSC-HX50, 18MP, Wi-Fi</h3>
+<div style="margin-top:10px;margin-bottom:10px"><img src="{{asset('Client/images/full-star.gif')}}" width="13" height="12" alt=""/><img src="{{asset('Client/images/full-star.gif')}}" width="13" height="12" alt=""/><img src="{{asset('Client/images/full-star.gif')}}" width="13" height="12" alt=""/><img src="{{asset('Client/images/full-star.gif')}}" width="13" height="12" alt=""/><img src="{{asset('Client/images/full-star.gif')}}" width="13" height="12" alt=""/> <span style="position:relative;top:-2px;left:20px">(<a href="review-sony-dschx-mp-22.html">2 Reviews</a>)</span></div>
+<hr/>
+	
+<div class="col-md-5 no-left-padding">
+	
+	<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+	<script src="{{asset('Client/js/jquery.prettyPhoto.js')}}" type="text/javascript" charset="utf-8"></script>
+	<div class="final-result-image"><a href="{{asset(''~ entity.photo.path ~'')}}" rel="prettyPhoto[ad_gal]"><img src="{{asset(''~ entity.photo.path ~'')}}" class="img-responsive" alt="Sony DSC-HX50, 18MP, Wi-Fi"/></a></div>	
+	<div class="clear"></div><a href="{{asset(''~ entity.photo.path ~'')}}" rel="prettyPhoto[ad_gal]"><img src="{{asset(''~ entity.photo.path ~'')}}" width="100" alt="Sony DSC-HX50, 18MP, Wi-Fi"/></a><a href="{{asset(''~ entity.photo.path ~'')}}" rel="prettyPhoto[ad_gal]"><img src="{{asset(''~ entity.photo.path ~'')}}" width="100" alt="Sony DSC-HX50, 18MP, Wi-Fi"/></a><script type="text/javascript" charset="utf-8">
+		$(document).ready(function()
+		{
+			$("a[rel='prettyPhoto[ad_gal]']").prettyPhoto({
+
+			});
+		});
+		</script>
+</div>
+<div class="col-md-7">
+	{{entity.titre}}.<br/><br/>description:<b>{{entity.description}}</b><br/><br/><br/>
+        
+        
+       <form action="{{ path('t_mall_client_ajouter', { 'id' : entity.id }) }}" method="get" >
+
+
+                        <select style="width:50px" name="qte" class="span1">
+                            {% for i in 1..300 %}
+                                
+                                <option value="{{ i}}">{{ i}}</option>
+                                
+                                {% endfor %}
+                            
+                        </select>
+                                
+                                <div>
+                                    </br>
+                            <button class="btn btn-primary">Ajouter au panier</button>
+                        </div>
+    </form> 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+</div>
+<div class="clear"></div>
+<br/>
+<div class="pull-left">
+	<span class="price_style">Price: ¢{{entity.prix}}</span><br/></span>  
+</div>
+<div class="pull-left l-margin-40">
+ <a class="btn btn-md btn-primary" href="javascript:AddToCart('add_to_cart5cf5.html?lang=en&amp;vendor=bestcameras&amp;quantity=1&amp;action=add&amp;id=22')">Buy Now</a>
+	
+</div>
+<div class="clear"></div>
+<hr/>
+
+		<div class="clear"></div>
+		
+<br/><br/><br/>
+
+
+		
+		</div> 
+
+	{% endblock %}

@@ -1,0 +1,4 @@
+services:
+#    tmall_admin.example:
+#        class: Tmall\AdminBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

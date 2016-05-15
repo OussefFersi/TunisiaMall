@@ -1,0 +1,154 @@
+{%extends "TMallVendorBundle::layout.html.twig"%}
+
+{% block navbar%}
+    
+    
+  <div class="navbar">
+
+  <div class="top-bar">
+  
+	<div class="row">
+  
+		<div class="pull-left visible-xs visible-sm padding_5 left_padding_15">
+			<a href="javascript:ShowHide('nav_menu')" class="expand_menu_link"><img src="{{asset('vendor/images/menu-grid.gif')}}" alt="expand menu"/> &nbsp; Menu</a>
+		</div>
+		<div class="clearfix"></div>
+        <div id="nav_menu" class="navbar-collapse">
+          <ul class="main-top-menu nav navbar-nav">
+            
+<li class="dropdown"><a class="main-top-link" href="{{path('t_mall_vendor_homepage')}}">Home</a>
+
+</li>
+<li class="dropdown"><a class="main-top-link" href="{{path('t_mall_client_listBoutique')}}">Create Store</a>
+
+</li>
+<li class="dropdown"><a class="main-top-link" href="">Stores</a>
+
+</li>
+<li class="dropdown"><a class="main-top-link" href="{{path('t_mall_vendor_approve')}}">Orders</a>
+<ul class="text-left dropdown-menu">
+<li ondragstart="javascript:dragStart()" id="orders-approve" class="menu-sub-link"><a href="{{path('t_mall_vendor_approve')}}">New Orders</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-rejected" class="menu-sub-link"><a href="{{path('t_mall_vendor_rejected')}}">Rejected Orders</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-approved" class="menu-sub-link"><a href="{{path('t_mall_vendor_approved')}}">Approved Orders</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-customers" class="menu-sub-link"><a href="">Customers</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-coupons" class="menu-sub-link"><a href="{{path('t_mall_vendor_addCoupons')}}">Coupons</a></li>
+<li ondragstart="javascript:dragStart()" id="orders-points" class="menu-sub-link"><a href="">Customer Loyalty Program</a></li>
+</ul>
+</li>
+
+
+<li class="dropdown"><a class="main-top-link" href="">Statistics</a>
+<ul class="text-left dropdown-menu">
+<li ondragstart="javascript:dragStart()" id="statistics-reports" class="menu-sub-link"><a href="">Reports</a></li>
+<li ondragstart="javascript:dragStart()" id="statistics-orders" class="menu-sub-link"><a href="">Orders</a></li>
+
+</ul>
+</li>
+		 </ul>
+					
+        </div>  
+	
+	</div>
+	
+  </div>
+</div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+{% endblock %}
+{% block container %}
+
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<h1>Add a new Order</h1>
+
+ 
+    {# ... #}
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+    <div class="form-group">
+    
+        {{ form_label(form.idProduit) }}
+        {{ form_errors(form.idProduit) }}
+        {{ form_widget(form.idProduit) }}
+    
+    </div>
+    <div class="form-group">
+    
+        {{ form_label(form.idUser) }}
+        {{ form_errors(form.idUser) }}
+        {{ form_widget(form.idUser) }}
+    
+    </div>
+    
+    <div class="form-group">
+    
+        {{ form_label(form.quantite) }}
+        {{ form_errors(form.quantite) }}
+        {{ form_widget(form.quantite) }}
+     
+    </div>
+        
+        
+        <div class="form-group">
+    
+        {{ form_label(form.date) }}
+        {{ form_errors(form.date) }}
+        {{ form_widget(form.date) }}
+     
+    </div>
+        
+        
+        <div class="form-group">
+    
+        {{ form_label(form.isRejected) }}
+        {{ form_errors(form.isRejected) }}
+        {{ form_widget(form.isRejected) }}
+     
+    </div>
+        
+        <div class="form-group">
+    
+        {{ form_label(form.prix) }}
+        {{ form_errors(form.prix) }}
+        {{ form_widget(form.prix) }} TTC
+     
+    </div>
+        
+      <a class="btn btn-default" href="{{path('t_mall_vendor_approve')}}">Back</a>
+        
+         
+        
+{{ form_end(form) }}
+	
+
+
+    
+    
+    
+
+
+
+<script src="{{asset('js/bootstrap.min.js')}}"> </script>
+<script src="{{asset('js/jquery.js')}}"> </script>
+
+
+
+
+
+
+{% endblock %}
+
+
+

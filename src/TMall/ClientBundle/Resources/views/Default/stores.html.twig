@@ -1,0 +1,57 @@
+
+{%extends  "TMallClientBundle::layout.html.twig"%}
+{% block content %}
+
+<div class="text-left no-left-padding col-md-9 min-height-300">
+		
+		<br/>
+
+	Create easily your online store, add your products and start selling online.	<br/><br/>
+	<a class="btn btn-gradient btn-default" href="{{path('t_mall_client_listBoutique')}}">
+		Create your store now	</a>
+	<br/>
+	
+	<div class="clear"></div>
+	<br/><br/>
+		
+
+	<h3>Find stores near you</h3>
+	<hr/>
+	<form action="{{path('t_mall_client_stores')}}" method="post">
+	<input type="hidden" name="search_stores" value="1"/>
+	<input type="hidden" name="mod" value="stores"/>
+		<input type="hidden" name="lang" value="en"/>
+		
+                
+                {% render(controller("TMallClientBundle:Default:rechercheBoutique")) %}
+           <div class="clear"></div>
+	<br/><br/>
+        
+			
+			
+     <div class="list-group add-border rounded-borders">          
+             <div href="#" class="top-bar rounded-borders">
+	<h4>Store List</h4>
+	</div>       
+    
+    
+      
+        
+    {% for boutique in boutiques %}
+ 
+    <a href="#" class="list-group-item">
+     
+        <img src="{{ asset(boutique.getWebPath) }}" alt="" class="spaced img-responsive" /> &nbsp name: {{boutique.nom}} &nbsp location:{{boutique.cordonne}}    </a>
+   
+    
+
+    {% endfor %}
+                </div>
+                
+              
+	
+		
+		
+		
+		</div> 
+{% endblock %}

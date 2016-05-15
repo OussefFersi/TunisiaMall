@@ -1,0 +1,72 @@
+
+t_mall_client_home:
+    path:     /index/{id}
+    defaults: { _controller: TMallClientBundle:Default:index }
+
+t_mall_client_stores:
+    path:     /stores
+    defaults: { _controller: TMallClientBundle:Default:rechercheBoutiqueTraitement }
+
+
+
+  
+
+
+
+
+t_mall_client_boutiqueDetail:
+    path: /detailBoutique
+    defaults: { _controller: TMallClientBundle:Default:boutiqueDetail }
+
+t_mall_client_cordonate:
+    path: /cordonate/{cordonne}
+    defaults: { _controller: TMallClientBundle:Default:cordonate }
+           
+t_mall_client_rechercheBoutique:
+    path: /rechercheBoutique
+    defaults: { _controller: TMallClientBundle:Default:rechercheBoutique }
+    
+
+
+
+
+t_mall_client_pdetails:
+    path:     /productdetails/{id}
+    defaults: { _controller: TMallClientBundle:Default:pdetails }
+    
+
+
+       
+t_mall_pdf:
+       path:     /pdf
+       defaults: { _controller: TMallClientBundle:Default:pdfgenrator }
+       
+       
+       
+       
+       
+t_mall_client_ajouter:
+    path:     /ajouter/{id}
+    defaults: { _controller: TMallClientBundle:Default:ajouter }
+
+t_mall_client_mail:
+    path:     /envoyermail
+    defaults: { _controller: TMallClientBundle:Default:envoyermail }
+
+t_mall_client_supprimer:
+    path:     /supprimer/{id}
+    defaults: { _controller: TMallClientBundle:Default:supprimer }
+
+
+t_mall_client_cart:
+    path:     /cart
+    defaults: { _controller: TMallClientBundle:Default:cart } 
+
+t_mall_client_aboutUs:
+    path:     /aboutUs
+    defaults: { _controller: TMallClientBundle:Default:aboutUs }    
+
+t_mall_client_contact_page:
+    path:     /contact
+    defaults: { _controller: TMallClientBundle:Default:contact_page }
+    

@@ -1,0 +1,24 @@
+t_mall_entity:
+    resource: "@TMallEntityBundle/Resources/config/routing.yml"
+    prefix:   /e
+
+t_mall_vendor:
+    resource: "@TMallVendorBundle/Resources/config/routing.yml"
+    prefix:   /vendor
+
+tmall_admin:
+    resource: "@TmallAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+t_mall_client:
+    resource: "@TMallClientBundle/Resources/config/routing.yml"
+    prefix:   /client
+
+personne:
+    resource: "@PersonneBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+genemu_upload:
+    resource: "@GenemuFormBundle/Resources/config/routing/upload.xml"
+genemu_image:
+    resource: "@GenemuFormBundle/Resources/config/routing/image.xml"

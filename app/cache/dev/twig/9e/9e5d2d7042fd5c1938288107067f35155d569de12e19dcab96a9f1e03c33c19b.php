@@ -42,7 +42,7 @@ class __TwigTemplate_3c7d2b782b5fac6bdd07a1c8a0232980b53f61cafacd159c980a2d50acd
     ";
         // line 9
         $this->displayBlock('fos_user_content', $context, $blocks);
-        // line 45
+        // line 46
         echo "
 
 
@@ -74,44 +74,45 @@ class __TwigTemplate_3c7d2b782b5fac6bdd07a1c8a0232980b53f61cafacd159c980a2d50acd
                 <div class=\"inner\">    
                     <!-- login widget -->
                     <div class=\"widget-container widget_login\">
-                        <h3>Login</h3>
+                        
                         <form action=\"";
         // line 25
         echo $this->env->getExtension('routing')->getPath("fos_user_security_check");
-        echo "\" method=\"post\" id=\"loginform\" class=\"loginform\">
+        echo "\" method=\"post\" id=\"loginform\" class=\"dark-matter\">
+                            <h3>Login</h3>
                             <input type=\"hidden\" name=\"_csrf_token\" value=\"";
-        // line 26
+        // line 27
         echo twig_escape_filter($this->env, (isset($context["csrf_token"]) ? $context["csrf_token"] : $this->getContext($context, "csrf_token")), "html", null, true);
         echo "\" />
 
                             <label for=\"username\">";
-        // line 28
+        // line 29
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("security.login.username", array(), "FOSUserBundle"), "html", null, true);
         echo "</label>
                             <input type=\"text\" id=\"user-login\" name=\"_username\" value=\"";
-        // line 29
+        // line 30
         echo twig_escape_filter($this->env, (isset($context["last_username"]) ? $context["last_username"] : $this->getContext($context, "last_username")), "html", null, true);
         echo "\" required=\"required\" class=\"input\" value=\"\" size=\"20\" tabindex=\"10\" type=\"text\"/>
 
                             <label for=\"password\">";
-        // line 31
+        // line 32
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("security.login.password", array(), "FOSUserBundle"), "html", null, true);
         echo "</label>
                             <input type=\"password\" id=\"password\" name=\"_password\" required=\"required\" class=\"input\" value=\"\" size=\"20\" tabindex=\"10\" type=\"text\"/>
-
+                            <br></br>
                             <input type=\"checkbox\" id=\"remember_me\" name=\"_remember_me\" value=\"on\" />
                             <label for=\"remember_me\">";
-        // line 35
+        // line 36
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("security.login.remember_me", array(), "FOSUserBundle"), "html", null, true);
         echo "</label>
                             <span class=\"separator\">|</span> <a href=\"";
-        // line 36
+        // line 37
         echo $this->env->getExtension('routing')->getPath("fos_user_resetting_request");
         echo "\">Forgot password</a>
                             <input type=\"submit\"  name=\"_submit\" value=\"";
-        // line 37
+        // line 38
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("security.login.submit", array(), "FOSUserBundle"), "html", null, true);
-        echo "\" id=\"wp-submit\" class=\"btn-submit\" value=\"Login\" tabindex=\"100\" />
+        echo "\" id=\"wp-submit\" class=\"btn btn-primary btn-sm\" value=\"Login\" tabindex=\"100\" />
                         </form>
                     </div>
 
@@ -133,7 +134,7 @@ class __TwigTemplate_3c7d2b782b5fac6bdd07a1c8a0232980b53f61cafacd159c980a2d50acd
 
     public function getDebugInfo()
     {
-        return array (  113 => 37,  109 => 36,  105 => 35,  98 => 31,  93 => 29,  89 => 28,  84 => 26,  80 => 25,  66 => 13,  60 => 11,  57 => 10,  54 => 9,  46 => 45,  44 => 9,  39 => 6,  36 => 5,  30 => 4,  11 => 1,);
+        return array (  114 => 38,  110 => 37,  106 => 36,  99 => 32,  94 => 30,  90 => 29,  85 => 27,  80 => 25,  66 => 13,  60 => 11,  57 => 10,  54 => 9,  46 => 46,  44 => 9,  39 => 6,  36 => 5,  30 => 4,  11 => 1,);
     }
 }
 /* {% extends "FOSUserBundle::layout.html.twig" %}*/
@@ -159,8 +160,9 @@ class __TwigTemplate_3c7d2b782b5fac6bdd07a1c8a0232980b53f61cafacd159c980a2d50acd
 /*                 <div class="inner">    */
 /*                     <!-- login widget -->*/
 /*                     <div class="widget-container widget_login">*/
-/*                         <h3>Login</h3>*/
-/*                         <form action="{{ path("fos_user_security_check") }}" method="post" id="loginform" class="loginform">*/
+/*                         */
+/*                         <form action="{{ path("fos_user_security_check") }}" method="post" id="loginform" class="dark-matter">*/
+/*                             <h3>Login</h3>*/
 /*                             <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />*/
 /* */
 /*                             <label for="username">{{ 'security.login.username'|trans }}</label>*/
@@ -168,11 +170,11 @@ class __TwigTemplate_3c7d2b782b5fac6bdd07a1c8a0232980b53f61cafacd159c980a2d50acd
 /* */
 /*                             <label for="password">{{ 'security.login.password'|trans }}</label>*/
 /*                             <input type="password" id="password" name="_password" required="required" class="input" value="" size="20" tabindex="10" type="text"/>*/
-/* */
+/*                             <br></br>*/
 /*                             <input type="checkbox" id="remember_me" name="_remember_me" value="on" />*/
 /*                             <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>*/
 /*                             <span class="separator">|</span> <a href="{{ path('fos_user_resetting_request') }}">Forgot password</a>*/
-/*                             <input type="submit"  name="_submit" value="{{ 'security.login.submit'|trans }}" id="wp-submit" class="btn-submit" value="Login" tabindex="100" />*/
+/*                             <input type="submit"  name="_submit" value="{{ 'security.login.submit'|trans }}" id="wp-submit" class="btn btn-primary btn-sm" value="Login" tabindex="100" />*/
 /*                         </form>*/
 /*                     </div>*/
 /* */

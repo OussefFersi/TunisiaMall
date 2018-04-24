@@ -291,13 +291,113 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // tmall_admin_homepage
-        if (rtrim($pathinfo, '/') === '/admin') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'tmall_admin_homepage');
+        if (0 === strpos($pathinfo, '/admin')) {
+            // tmall_admin_homepage
+            if (rtrim($pathinfo, '/') === '/admin') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'tmall_admin_homepage');
+                }
+
+                return array (  '_controller' => 'Tmall\\AdminBundle\\Controller\\DefaultController::indexAction',  '_route' => 'tmall_admin_homepage',);
             }
 
-            return array (  '_controller' => 'Tmall\\AdminBundle\\Controller\\DefaultController::indexAction',  '_route' => 'tmall_admin_homepage',);
+            // productslist
+            if ($pathinfo === '/admin/productslist') {
+                return array (  '_controller' => 'Tmall\\AdminBundle\\Controller\\DefaultController::listProductAction',  '_route' => 'productslist',);
+            }
+
+            // boutiqueslist
+            if ($pathinfo === '/admin/boutiqueslist') {
+                return array (  '_controller' => 'Tmall\\AdminBundle\\Controller\\BoutiqueController::indexAction',  '_route' => 'boutiqueslist',);
+            }
+
+            // e-commerce
+            if ($pathinfo === '/admin/ecommerce') {
+                return array (  '_controller' => 'Tmall\\AdminBundle\\Controller\\DefaultController::ecommerceAction',  '_route' => 'e-commerce',);
+            }
+
+            if (0 === strpos($pathinfo, '/admin/utilisateur')) {
+                // utilisateur
+                if (rtrim($pathinfo, '/') === '/admin/utilisateur') {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'utilisateur');
+                    }
+
+                    return array (  '_controller' => 'Tmall\\AdminBundle\\Controller\\UtilisateurController::indexAction',  '_route' => 'utilisateur',);
+                }
+
+                // utilisateur_show
+                if (preg_match('#^/admin/utilisateur/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'utilisateur_show')), array (  '_controller' => 'Tmall\\AdminBundle\\Controller\\UtilisateurController::showAction',));
+                }
+
+                // utilisateur_new
+                if ($pathinfo === '/admin/utilisateur/new') {
+                    return array (  '_controller' => 'Tmall\\AdminBundle\\Controller\\UtilisateurController::newAction',  '_route' => 'utilisateur_new',);
+                }
+
+                // utilisateur_create
+                if ($pathinfo === '/admin/utilisateur/create') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_utilisateur_create;
+                    }
+
+                    return array (  '_controller' => 'Tmall\\AdminBundle\\Controller\\UtilisateurController::createAction',  '_route' => 'utilisateur_create',);
+                }
+                not_utilisateur_create:
+
+                // utilisateur_edit
+                if (preg_match('#^/admin/utilisateur/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'utilisateur_edit')), array (  '_controller' => 'Tmall\\AdminBundle\\Controller\\UtilisateurController::editAction',));
+                }
+
+                // utilisateur_update
+                if (preg_match('#^/admin/utilisateur/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                        $allow = array_merge($allow, array('POST', 'PUT'));
+                        goto not_utilisateur_update;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'utilisateur_update')), array (  '_controller' => 'Tmall\\AdminBundle\\Controller\\UtilisateurController::updateAction',));
+                }
+                not_utilisateur_update:
+
+                // utilisateur_delete
+                if (preg_match('#^/admin/utilisateur/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                        $allow = array_merge($allow, array('POST', 'DELETE'));
+                        goto not_utilisateur_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'utilisateur_delete')), array (  '_controller' => 'Tmall\\AdminBundle\\Controller\\UtilisateurController::deleteAction',));
+                }
+                not_utilisateur_delete:
+
+            }
+
+            // boutique_delete
+            if (preg_match('#^/admin/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                    $allow = array_merge($allow, array('POST', 'DELETE'));
+                    goto not_boutique_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'boutique_delete')), array (  '_controller' => 'Tmall\\AdminBundle\\Controller\\BoutiqueController::deleteAction',));
+            }
+            not_boutique_delete:
+
+            // product_delete
+            if (preg_match('#^/admin/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                    $allow = array_merge($allow, array('POST', 'DELETE'));
+                    goto not_product_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'product_delete')), array (  '_controller' => 'Tmall\\AdminBundle\\Controller\\DefaultController::deleteAction',));
+            }
+            not_product_delete:
+
         }
 
         if (0 === strpos($pathinfo, '/client')) {

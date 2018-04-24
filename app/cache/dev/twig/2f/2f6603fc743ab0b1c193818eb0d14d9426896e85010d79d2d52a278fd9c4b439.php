@@ -63,7 +63,7 @@ class __TwigTemplate_5bafa83ca23243494520439aaca22dedf7480c373cece4490566b7d5fe6
         echo "                        ";
         // line 10
         echo "                            ";
-        echo $this->env->getExtension('translator')->trans("Welcome to Tunisia", array("%username%" => $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "username", array())), "FOSUserBundle");
+        echo $this->env->getExtension('translator')->trans("Welcome to Tunisia Mall", array("%username%" => $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "username", array())), "FOSUserBundle");
         echo "
                         ";
         // line 12
@@ -108,7 +108,7 @@ class __TwigTemplate_5bafa83ca23243494520439aaca22dedf7480c373cece4490566b7d5fe6
 /* */
 /*                     {% block subject %}*/
 /*                         {% autoescape false %}*/
-/*                             {{ 'Welcome to Tunisia'|trans({'%username%': user.username}) }}*/
+/*                             {{ 'Welcome to Tunisia Mall'|trans({'%username%': user.username}) }}*/
 /*                         {% endautoescape %}*/
 /*                     {% endblock %}*/
 /*                     {% block body_text %}*/

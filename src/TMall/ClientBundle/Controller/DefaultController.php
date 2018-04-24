@@ -156,7 +156,7 @@ class DefaultController extends Controller
          $pagination  = $boutique ->paginate(
         $boutiq,
         $this->get('request')->query->get('page', 1)/*page number*/,
-        9/*limit per page*/
+        3/*limit per page*/
     );
         
        

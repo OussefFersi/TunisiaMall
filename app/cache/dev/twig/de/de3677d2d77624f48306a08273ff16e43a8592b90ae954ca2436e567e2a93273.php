@@ -30,55 +30,27 @@ class __TwigTemplate_909ccffe91031f818dafbf748d55b48bfaa69bbf88a218b438a4c8ae9ce
     {
         // line 6
         echo "
-        <div>
-            ";
-        // line 8
-        if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-            // line 9
-            echo "                ";
-            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("layout.logged_in_as", array("%username%" => $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array())), "FOSUserBundle"), "html", null, true);
-            echo " |
-                <a href=\"";
-            // line 10
-            echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
-            echo "\">
-                    ";
-            // line 11
-            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("layout.logout", array(), "FOSUserBundle"), "html", null, true);
-            echo "
-                </a>
-            ";
-        } else {
-            // line 14
-            echo "                <a href=\"";
-            echo $this->env->getExtension('routing')->getPath("fos_user_security_login");
-            echo "\">";
-            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("layout.login", array(), "FOSUserBundle"), "html", null, true);
-            echo "</a>
-            ";
-        }
-        // line 16
-        echo "        </div>
+        
 
         ";
-        // line 18
+        // line 9
         if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "hasPreviousSession", array())) {
-            // line 19
+            // line 10
             echo "            ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "flashbag", array()), "all", array(), "method"));
             foreach ($context['_seq'] as $context["type"] => $context["messages"]) {
-                // line 20
+                // line 11
                 echo "                ";
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable($context["messages"]);
                 foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-                    // line 21
+                    // line 12
                     echo "                    <div class=\"flash-";
                     echo twig_escape_filter($this->env, $context["type"], "html", null, true);
                     echo "\">
                         ";
-                    // line 22
+                    // line 13
                     echo twig_escape_filter($this->env, $context["message"], "html", null, true);
                     echo "
                     </div>
@@ -87,32 +59,32 @@ class __TwigTemplate_909ccffe91031f818dafbf748d55b48bfaa69bbf88a218b438a4c8ae9ce
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 25
+                // line 16
                 echo "            ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['type'], $context['messages'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 26
+            // line 17
             echo "        ";
         }
-        // line 27
+        // line 18
         echo "
-        <div>
+        <div >
             ";
-        // line 29
+        // line 20
         $this->displayBlock('fos_user_content', $context, $blocks);
-        // line 31
+        // line 22
         echo "        </div>
       
         
     ";
     }
 
-    // line 29
+    // line 20
     public function block_fos_user_content($context, array $blocks = array())
     {
-        // line 30
+        // line 21
         echo "            ";
     }
 
@@ -128,7 +100,7 @@ class __TwigTemplate_909ccffe91031f818dafbf748d55b48bfaa69bbf88a218b438a4c8ae9ce
 
     public function getDebugInfo()
     {
-        return array (  116 => 30,  113 => 29,  106 => 31,  104 => 29,  100 => 27,  97 => 26,  91 => 25,  82 => 22,  77 => 21,  72 => 20,  67 => 19,  65 => 18,  61 => 16,  53 => 14,  47 => 11,  43 => 10,  38 => 9,  36 => 8,  32 => 6,  29 => 5,  11 => 1,);
+        return array (  88 => 21,  85 => 20,  78 => 22,  76 => 20,  72 => 18,  69 => 17,  63 => 16,  54 => 13,  49 => 12,  44 => 11,  39 => 10,  37 => 9,  32 => 6,  29 => 5,  11 => 1,);
     }
 }
 /* {% extends '::default/base.html.twig' %}*/
@@ -137,16 +109,7 @@ class __TwigTemplate_909ccffe91031f818dafbf748d55b48bfaa69bbf88a218b438a4c8ae9ce
 /* */
 /* {% block body %}*/
 /* */
-/*         <div>*/
-/*             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}*/
-/*                 {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |*/
-/*                 <a href="{{ path('fos_user_security_logout') }}">*/
-/*                     {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}*/
-/*                 </a>*/
-/*             {% else %}*/
-/*                 <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>*/
-/*             {% endif %}*/
-/*         </div>*/
+/*         */
 /* */
 /*         {% if app.request.hasPreviousSession %}*/
 /*             {% for type, messages in app.session.flashbag.all() %}*/
@@ -158,7 +121,7 @@ class __TwigTemplate_909ccffe91031f818dafbf748d55b48bfaa69bbf88a218b438a4c8ae9ce
 /*             {% endfor %}*/
 /*         {% endif %}*/
 /* */
-/*         <div>*/
+/*         <div >*/
 /*             {% block fos_user_content %}*/
 /*             {% endblock fos_user_content %}*/
 /*         </div>*/

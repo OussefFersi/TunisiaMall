@@ -34,7 +34,10 @@ class __TwigTemplate_995515b8699c511dff42d20d7c9eaa911e374f06cbefec6b7cdc9775307
         // line 12
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/css/bootstrap.css"), "html", null, true);
         echo "\" rel=\"stylesheet\"/>
-
+<link rel=\"stylesheet\" href=\"";
+        // line 13
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("form_style.css"), "html", null, true);
+        echo "\">
 <link rel=\"stylesheet\" href=\"";
         // line 14
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/css/common.css"), "html", null, true);
@@ -100,6 +103,13 @@ class __TwigTemplate_995515b8699c511dff42d20d7c9eaa911e374f06cbefec6b7cdc9775307
 ";
         }
         // line 45
+        echo "  ";
+        if ($this->env->getExtension('security')->isGranted("ROLE_SUPER_ADMIN")) {
+            echo " <a class=\"separator\">|</a> <a href=\"";
+            echo $this->env->getExtension('routing')->getPath("tmall_admin_homepage");
+            echo "\">Admin Page</a>";
+        }
+        // line 46
         echo "</p>
                             </div>    
 
@@ -142,23 +152,30 @@ class __TwigTemplate_995515b8699c511dff42d20d7c9eaa911e374f06cbefec6b7cdc9775307
 \t<div class=\"col-md-5 no-left-padding\">
 \t
 \t\t<a class=\"show-sm pull-right\" href=\"javascript:ShowHide('top_menu')\"><img src=\"";
-        // line 86
+        // line 87
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/menu-grid.gif"), "html", null, true);
         echo "\"/></a>
 \t\t
 \t\t
 \t\t<ul id=\"top_menu\" class=\"top-menu rel-5 hide-sm\">
-\t\t\t<div class=\"show-sm\">
-<li><a href=\"\">Home</a></li>
-<li><a href=\"\">Create your store</a></li>
-<li><a href=\"en_About%2bus.html\">About us</a></li>
-<li><a href=\"en_Contact.html\">Contact</a></li></div>
-\t\t\t\t
-<li><a href=\"";
-        // line 96
-        echo $this->env->getExtension('routing')->getPath("t_mall_client_boutiqueDetail");
-        echo "\">Stores</a></li>
-
+\t\t\t
+                    ";
+        // line 92
+        if ($this->env->getExtension('security')->isGranted("ROLE_VENDOR")) {
+            echo "<li><a href=\"";
+            echo $this->env->getExtension('routing')->getPath("t_mall_client_listBoutique");
+            echo "\">Create Stores</a></li>";
+        }
+        echo "\t\t\t\t
+";
+        // line 93
+        if ($this->env->getExtension('security')->isGranted("ROLE_USER")) {
+            echo "<li><a href=\"";
+            echo $this->env->getExtension('routing')->getPath("t_mall_client_boutiqueDetail");
+            echo "\">Stores</a></li>";
+        }
+        // line 94
+        echo "
 
 \t\t</ul>
 \t\t\t
@@ -201,12 +218,12 @@ class __TwigTemplate_995515b8699c511dff42d20d7c9eaa911e374f06cbefec6b7cdc9775307
      
            
         ";
-        // line 139
+        // line 136
         $this->displayBlock('content', $context, $blocks);
-        // line 140
+        // line 137
         echo "        ";
         $this->displayBlock('body', $context, $blocks);
-        // line 141
+        // line 138
         echo "            <!-- after content -->
             
             <!--/ after content -->
@@ -220,54 +237,60 @@ class __TwigTemplate_995515b8699c511dff42d20d7c9eaa911e374f06cbefec6b7cdc9775307
 \t\t\t<div class=\"col-md-3\">
 \t<h5>ABOUT</h5>
 \t
-\t\t\t\t\t\t<a class=\"upper\" href=\"index.html\">Home</a>
+\t\t\t\t\t\t<a class=\"upper\" href=\"";
+        // line 151
+        echo $this->env->getExtension('routing')->getPath("front");
+        echo "\">Home</a>
 \t\t\t\t\t
-\t\t\t\t\t\t<a class=\"upper\" href=\"en_Create%2byour%2bstore.html\">Create your store</a>
+\t\t\t\t\t\t
 \t\t\t\t\t
-\t\t\t\t\t\t<a class=\"upper\" href=\"en_About%2bus.html\">About us</a>
+\t\t\t\t\t\t<a class=\"upper\" href=\"";
+        // line 155
+        echo $this->env->getExtension('routing')->getPath("t_mall_client_aboutUs");
+        echo "\">About us</a>
 \t\t\t\t\t
-\t\t\t\t\t\t<a class=\"upper\" href=\"en_Contact.html\">Contact</a>
+\t\t\t\t\t\t<a class=\"upper\" href=\"";
+        // line 157
+        echo $this->env->getExtension('routing')->getPath("t_mall_client_contact_page");
+        echo "\">Contact</a>
 \t\t\t\t\t </div>
-<div class=\"col-md-3\">
-\t<h5>INFORMATION</h5>
-\t<a href=\"terms.html\">TERMS AND CONDITIONS</a> 
-\t<a href=\"faq.html\">FAQ</a>
- </div>
+
 <div class=\"col-md-3\">
 \t<h5>OUR OFFERS</h5>
-\t<a class=\"upper\" href=\"en-mod-categories.html\">Shop by Category</a>
-\t<a class=\"upper\" href=\"\">Stores</a>
-\t<a class=\"upper\" href=\"enproducts.html\">Special Offers</a>
-\t<a class=\"upper\" href=\"en-mod-top_rated.html\">Top Rated</a>
-\t<a class=\"upper\" href=\"en-mod-recent_reviews.html\">Reviews</a>
+\t
+\t<a class=\"upper\" href=\"";
+        // line 163
+        echo $this->env->getExtension('routing')->getPath("t_mall_client_boutiqueDetail");
+        echo "\">Stores</a>
+\t
 
  </div>
 <div id=\"socialMedia\" class=\"col-md-3 pull-right\">
 \t<h5>SOCIAL MEDIA </h5>
 \t<a href=\"#\"><img width=\"60\" height=\"60\" src=\"";
-        // line 178
+        // line 169
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/facebook.png"), "html", null, true);
         echo "\" title=\"facebook\" alt=\"facebook\"/></a>
 \t<a href=\"#\"><img width=\"60\" height=\"60\" src=\"";
-        // line 179
+        // line 170
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/twitter.png"), "html", null, true);
         echo "\" title=\"twitter\" alt=\"twitter\"/></a>
 \t<a href=\"#\"><img width=\"60\" height=\"60\" src=\"";
-        // line 180
+        // line 171
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/youtube.png"), "html", null, true);
         echo "\" title=\"youtube\" alt=\"youtube\"/></a>
  </div> 
 \t\t </div>
-\t\t<p class=\"pull-right\">2014 &copy; QuixStore.com</p>
+\t\t<p class=\"pull-right\">2016 &copy; Tunisia Mall</p>
 \t</div>
 \t</div>
             <!--/ footer -->
        
        
     ";
-        // line 189
+        // line 180
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 190
+        // line 181
         echo "    <script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
@@ -275,12 +298,12 @@ class __TwigTemplate_995515b8699c511dff42d20d7c9eaa911e374f06cbefec6b7cdc9775307
 \t
 
 \t<script src=\"";
-        // line 194
+        // line 185
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/js/login.js"), "html", null, true);
         echo "\"></script>
 <div id=\"main-login-form\">
 \t<a href=\"javascript:HideLogin()\"><img class=\"close-login-icon\" alt=\"close\" src=\"";
-        // line 196
+        // line 187
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/closeicon.png"), "html", null, true);
         echo "\"/></a>
 \t<h3 class=\"lfloat\" id=\"top_msg_header\">
@@ -320,7 +343,7 @@ class __TwigTemplate_995515b8699c511dff42d20d7c9eaa911e374f06cbefec6b7cdc9775307
 \t
 \tThe product was added successfully to your cart!\t<br/><br/>
 \t<a class=\"underline-link\" href=\"javascript:ShowCart()\"><img src=\"";
-        // line 233
+        // line 224
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/cart-m.png"), "html", null, true);
         echo "\"/></a>
 \t<br/>
@@ -346,17 +369,17 @@ class __TwigTemplate_995515b8699c511dff42d20d7c9eaa911e374f06cbefec6b7cdc9775307
 ";
     }
 
-    // line 139
+    // line 136
     public function block_content($context, array $blocks = array())
     {
     }
 
-    // line 140
+    // line 137
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 189
+    // line 180
     public function block_javascripts($context, array $blocks = array())
     {
     }
@@ -373,7 +396,7 @@ class __TwigTemplate_995515b8699c511dff42d20d7c9eaa911e374f06cbefec6b7cdc9775307
 
     public function getDebugInfo()
     {
-        return array (  360 => 189,  355 => 140,  350 => 139,  324 => 233,  284 => 196,  279 => 194,  271 => 190,  269 => 189,  257 => 180,  253 => 179,  249 => 178,  210 => 141,  207 => 140,  205 => 139,  159 => 96,  146 => 86,  103 => 45,  95 => 43,  80 => 42,  63 => 28,  48 => 16,  44 => 15,  40 => 14,  35 => 12,  22 => 1,);
+        return array (  383 => 180,  378 => 137,  373 => 136,  347 => 224,  307 => 187,  302 => 185,  294 => 181,  292 => 180,  280 => 171,  276 => 170,  272 => 169,  263 => 163,  254 => 157,  249 => 155,  242 => 151,  227 => 138,  224 => 137,  222 => 136,  178 => 94,  172 => 93,  164 => 92,  156 => 87,  113 => 46,  106 => 45,  98 => 43,  83 => 42,  66 => 28,  51 => 16,  47 => 15,  43 => 14,  39 => 13,  35 => 12,  22 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -388,7 +411,7 @@ class __TwigTemplate_995515b8699c511dff42d20d7c9eaa911e374f06cbefec6b7cdc9775307
 /* <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">*/
 /* <meta http-equiv="X-UA-Compatible" content="IE=edge">*/
 /* <link href="{{asset('Client/css/bootstrap.css')}}" rel="stylesheet"/>*/
-/* */
+/* <link rel="stylesheet" href="{{ asset('form_style.css') }}">*/
 /* <link rel="stylesheet" href="{{asset('Client/css/common.css')}}">*/
 /* <link rel="stylesheet" href="{{asset('Client/css/main.css')}}">*/
 /* <script src="{{asset('Client/js/jquery.js')}}"></script>*/
@@ -420,6 +443,7 @@ class __TwigTemplate_995515b8699c511dff42d20d7c9eaa911e374f06cbefec6b7cdc9775307
 /*                                 <p>{% if not is_granted("ROLE_USER") %}<a href="{{ path('fos_user_security_login') }}">Log IN</a> <span class="separator">|</span> <a href="{{ path('fos_user_registration_register') }}">REGISTER</a>{% endif %}{% if is_granted("ROLE_USER") %}<span class="separator">|</span> <a href="{{ path('fos_user_security_logout') }}">Logout</a> {% endif %}<a class="separator">|</a> {% if is_granted("ROLE_USER") %}*/
 /*    <a href="{{ path('fos_user_profile_show') }}">  {{ app.user.username }} </a>*/
 /* {% endif %}*/
+/*   {% if  is_granted("ROLE_SUPER_ADMIN") %} <a class="separator">|</a> <a href="{{ path('tmall_admin_homepage') }}">Admin Page</a>{% endif %}*/
 /* </p>*/
 /*                             </div>    */
 /* */
@@ -465,13 +489,9 @@ class __TwigTemplate_995515b8699c511dff42d20d7c9eaa911e374f06cbefec6b7cdc9775307
 /* 		*/
 /* 		*/
 /* 		<ul id="top_menu" class="top-menu rel-5 hide-sm">*/
-/* 			<div class="show-sm">*/
-/* <li><a href="">Home</a></li>*/
-/* <li><a href="">Create your store</a></li>*/
-/* <li><a href="en_About%2bus.html">About us</a></li>*/
-/* <li><a href="en_Contact.html">Contact</a></li></div>*/
-/* 				*/
-/* <li><a href="{{path('t_mall_client_boutiqueDetail')}}">Stores</a></li>*/
+/* 			*/
+/*                     {% if is_granted("ROLE_VENDOR") %}<li><a href="{{path('t_mall_client_listBoutique')}}">Create Stores</a></li>{% endif %}				*/
+/* {% if is_granted("ROLE_USER") %}<li><a href="{{path('t_mall_client_boutiqueDetail')}}">Stores</a></li>{% endif %}*/
 /* */
 /* */
 /* 		</ul>*/
@@ -529,26 +549,20 @@ class __TwigTemplate_995515b8699c511dff42d20d7c9eaa911e374f06cbefec6b7cdc9775307
 /* 			<div class="col-md-3">*/
 /* 	<h5>ABOUT</h5>*/
 /* 	*/
-/* 						<a class="upper" href="index.html">Home</a>*/
+/* 						<a class="upper" href="{{path('front')}}">Home</a>*/
 /* 					*/
-/* 						<a class="upper" href="en_Create%2byour%2bstore.html">Create your store</a>*/
+/* 						*/
 /* 					*/
-/* 						<a class="upper" href="en_About%2bus.html">About us</a>*/
+/* 						<a class="upper" href="{{path('t_mall_client_aboutUs')}}">About us</a>*/
 /* 					*/
-/* 						<a class="upper" href="en_Contact.html">Contact</a>*/
+/* 						<a class="upper" href="{{path('t_mall_client_contact_page')}}">Contact</a>*/
 /* 					 </div>*/
-/* <div class="col-md-3">*/
-/* 	<h5>INFORMATION</h5>*/
-/* 	<a href="terms.html">TERMS AND CONDITIONS</a> */
-/* 	<a href="faq.html">FAQ</a>*/
-/*  </div>*/
+/* */
 /* <div class="col-md-3">*/
 /* 	<h5>OUR OFFERS</h5>*/
-/* 	<a class="upper" href="en-mod-categories.html">Shop by Category</a>*/
-/* 	<a class="upper" href="">Stores</a>*/
-/* 	<a class="upper" href="enproducts.html">Special Offers</a>*/
-/* 	<a class="upper" href="en-mod-top_rated.html">Top Rated</a>*/
-/* 	<a class="upper" href="en-mod-recent_reviews.html">Reviews</a>*/
+/* 	*/
+/* 	<a class="upper" href="{{path('t_mall_client_boutiqueDetail')}}">Stores</a>*/
+/* 	*/
 /* */
 /*  </div>*/
 /* <div id="socialMedia" class="col-md-3 pull-right">*/
@@ -558,7 +572,7 @@ class __TwigTemplate_995515b8699c511dff42d20d7c9eaa911e374f06cbefec6b7cdc9775307
 /* 	<a href="#"><img width="60" height="60" src="{{asset('Client/images/youtube.png')}}" title="youtube" alt="youtube"/></a>*/
 /*  </div> */
 /* 		 </div>*/
-/* 		<p class="pull-right">2014 &copy; QuixStore.com</p>*/
+/* 		<p class="pull-right">2016 &copy; Tunisia Mall</p>*/
 /* 	</div>*/
 /* 	</div>*/
 /*             <!--/ footer -->*/

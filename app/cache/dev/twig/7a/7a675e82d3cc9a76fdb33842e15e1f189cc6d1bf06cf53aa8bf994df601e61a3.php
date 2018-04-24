@@ -77,23 +77,12 @@ class __TwigTemplate_f8194807f7670b0224db90074cdf99b952692b76ffca4dbba44d54170fb
         // line 30
         echo $this->env->getExtension('routing')->getPath("t_mall_vendor_approved");
         echo "\">Approved Orders</a></li>
-<li ondragstart=\"javascript:dragStart()\" id=\"orders-customers\" class=\"menu-sub-link\"><a href=\"\">Customers</a></li>
-<li ondragstart=\"javascript:dragStart()\" id=\"orders-coupons\" class=\"menu-sub-link\"><a href=\"";
-        // line 32
-        echo $this->env->getExtension('routing')->getPath("t_mall_vendor_addCoupons");
-        echo "\">Coupons</a></li>
-<li ondragstart=\"javascript:dragStart()\" id=\"orders-points\" class=\"menu-sub-link\"><a href=\"\">Customer Loyalty Program</a></li>
-</ul>
-</li>
-
-
-<li class=\"dropdown\"><a class=\"main-top-link\" href=\"\">Statistics</a>
-<ul class=\"text-left dropdown-menu\">
-<li ondragstart=\"javascript:dragStart()\" id=\"statistics-reports\" class=\"menu-sub-link\"><a href=\"\">Reports</a></li>
-<li ondragstart=\"javascript:dragStart()\" id=\"statistics-orders\" class=\"menu-sub-link\"><a href=\"\">Orders</a></li>
 
 </ul>
 </li>
+
+
+
 \t\t </ul>
 \t\t\t\t\t
         </div>  
@@ -119,10 +108,10 @@ class __TwigTemplate_f8194807f7670b0224db90074cdf99b952692b76ffca4dbba44d54170fb
 ";
     }
 
-    // line 68
+    // line 60
     public function block_container($context, array $blocks = array())
     {
-        // line 69
+        // line 61
         echo "
     
 <div class=\"container\">    
@@ -137,11 +126,11 @@ class __TwigTemplate_f8194807f7670b0224db90074cdf99b952692b76ffca4dbba44d54170fb
 
 <div class=\"separator clear\"></div>
     ";
-        // line 82
+        // line 74
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
         foreach ($context['_seq'] as $context["_key"] => $context["boutique"]) {
-            // line 83
+            // line 75
             echo " 
     <div class=\"col-md-4 no-left-right\">
 <div class=\"product featured-product\">
@@ -150,7 +139,7 @@ class __TwigTemplate_f8194807f7670b0224db90074cdf99b952692b76ffca4dbba44d54170fb
 \t<div class=\"product-image\">
 \t\t\t\t\t
 \t\t\t\t\t  <img src=\"";
-            // line 90
+            // line 82
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute($context["boutique"], "getWebPath", array())), "html", null, true);
             echo "\" class=\"thumb-image \" width=\"150\" alt=\"\" />
 \t\t\t\t
@@ -158,11 +147,11 @@ class __TwigTemplate_f8194807f7670b0224db90074cdf99b952692b76ffca4dbba44d54170fb
 \t\t\t
 \t\t\t\t<div class=\"product-description\">
 \t\t\t\t<div class=\"product-name\"><a>";
-            // line 95
+            // line 87
             echo twig_escape_filter($this->env, $this->getAttribute($context["boutique"], "nom", array()), "html", null, true);
             echo "</a></div>
                                 <h4>";
-            // line 96
+            // line 88
             echo twig_escape_filter($this->env, $this->getAttribute($context["boutique"], "cordonne", array()), "html", null, true);
             echo "</h4>
 \t
@@ -173,11 +162,11 @@ class __TwigTemplate_f8194807f7670b0224db90074cdf99b952692b76ffca4dbba44d54170fb
 
 
 <a href=\"";
-            // line 104
+            // line 96
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("produit", array("id" => $this->getAttribute($context["boutique"], "id", array()))), "html", null, true);
             echo "\" class=\"btn btn-primary\">View Product</a>
 <a href=\"";
-            // line 105
+            // line 97
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("produit_new", array("id" => $this->getAttribute($context["boutique"], "id", array()))), "html", null, true);
             echo "\" class=\"btn btn-primary\">Add Product</a>
 \t\t\t\t</div>\t
@@ -191,18 +180,18 @@ class __TwigTemplate_f8194807f7670b0224db90074cdf99b952692b76ffca4dbba44d54170fb
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['boutique'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 113
-        echo "    
+        // line 105
+        echo "    <div class=\"navigation\" style=\"padding-right: 20\">
+    ";
+        // line 106
+        echo $this->env->getExtension('knp_pagination')->render($this->env, (isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
+        echo "
+</div>
   \t</div> 
       
     
     
-      <div class=\"navigation\" style=\"padding-right: 20\">
-    ";
-        // line 119
-        echo $this->env->getExtension('knp_pagination')->render($this->env, (isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
-        echo "
-</div>
+      
 </div>  
     
     ";
@@ -220,7 +209,7 @@ class __TwigTemplate_f8194807f7670b0224db90074cdf99b952692b76ffca4dbba44d54170fb
 
     public function getDebugInfo()
     {
-        return array (  203 => 119,  195 => 113,  181 => 105,  177 => 104,  166 => 96,  162 => 95,  154 => 90,  145 => 83,  141 => 82,  126 => 69,  123 => 68,  83 => 32,  78 => 30,  74 => 29,  70 => 28,  65 => 26,  58 => 22,  52 => 19,  43 => 13,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  187 => 106,  184 => 105,  170 => 97,  166 => 96,  155 => 88,  151 => 87,  143 => 82,  134 => 75,  130 => 74,  115 => 61,  112 => 60,  78 => 30,  74 => 29,  70 => 28,  65 => 26,  58 => 22,  52 => 19,  43 => 13,  32 => 4,  29 => 3,  11 => 1,);
     }
 }
 /* {%extends "TMallVendorBundle::layout.html.twig"%}*/
@@ -253,20 +242,12 @@ class __TwigTemplate_f8194807f7670b0224db90074cdf99b952692b76ffca4dbba44d54170fb
 /* <li ondragstart="javascript:dragStart()" id="orders-approve" class="menu-sub-link"><a href="{{path('t_mall_vendor_approve')}}">New Orders</a></li>*/
 /* <li ondragstart="javascript:dragStart()" id="orders-rejected" class="menu-sub-link"><a href="{{path('t_mall_vendor_rejected')}}">Rejected Orders</a></li>*/
 /* <li ondragstart="javascript:dragStart()" id="orders-approved" class="menu-sub-link"><a href="{{path('t_mall_vendor_approved')}}">Approved Orders</a></li>*/
-/* <li ondragstart="javascript:dragStart()" id="orders-customers" class="menu-sub-link"><a href="">Customers</a></li>*/
-/* <li ondragstart="javascript:dragStart()" id="orders-coupons" class="menu-sub-link"><a href="{{path('t_mall_vendor_addCoupons')}}">Coupons</a></li>*/
-/* <li ondragstart="javascript:dragStart()" id="orders-points" class="menu-sub-link"><a href="">Customer Loyalty Program</a></li>*/
-/* </ul>*/
-/* </li>*/
-/* */
-/* */
-/* <li class="dropdown"><a class="main-top-link" href="">Statistics</a>*/
-/* <ul class="text-left dropdown-menu">*/
-/* <li ondragstart="javascript:dragStart()" id="statistics-reports" class="menu-sub-link"><a href="">Reports</a></li>*/
-/* <li ondragstart="javascript:dragStart()" id="statistics-orders" class="menu-sub-link"><a href="">Orders</a></li>*/
 /* */
 /* </ul>*/
 /* </li>*/
+/* */
+/* */
+/* */
 /* 		 </ul>*/
 /* 					*/
 /*         </div>  */
@@ -335,14 +316,14 @@ class __TwigTemplate_f8194807f7670b0224db90074cdf99b952692b76ffca4dbba44d54170fb
 /*     */
 /* */
 /*     {% endfor %}*/
-/*     */
+/*     <div class="navigation" style="padding-right: 20">*/
+/*     {{ knp_pagination_render(pagination) }}*/
+/* </div>*/
 /*   	</div> */
 /*       */
 /*     */
 /*     */
-/*       <div class="navigation" style="padding-right: 20">*/
-/*     {{ knp_pagination_render(pagination) }}*/
-/* </div>*/
+/*       */
 /* </div>  */
 /*     */
 /*     {% endblock %}*/

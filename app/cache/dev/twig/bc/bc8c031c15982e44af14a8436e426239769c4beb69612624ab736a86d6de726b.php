@@ -32,7 +32,7 @@ class __TwigTemplate_e7a96a63cfe74263092806d2dc436b7739173af899468a3ab1ff3ee1189
     
     
     
-    
+   
    
    <div class=\"text-left no-left-padding col-md-9 min-height-300\">  
        
@@ -90,17 +90,17 @@ class __TwigTemplate_e7a96a63cfe74263092806d2dc436b7739173af899468a3ab1ff3ee1189
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['boutique'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 46
-        echo "    
+        echo "     <div class=\"navigation\" style=\"padding-right: 20\">
+    ";
+        // line 47
+        echo $this->env->getExtension('knp_pagination')->render($this->env, (isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
+        echo "
+     </div>
   \t</div> 
       
     
     
-      <div class=\"navigation\" style=\"padding-right: 20\">
-    ";
-        // line 52
-        echo $this->env->getExtension('knp_pagination')->render($this->env, (isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
-        echo "
-</div>
+     
     
     
     ";
@@ -118,7 +118,7 @@ class __TwigTemplate_e7a96a63cfe74263092806d2dc436b7739173af899468a3ab1ff3ee1189
 
     public function getDebugInfo()
     {
-        return array (  101 => 52,  93 => 46,  70 => 29,  62 => 24,  55 => 20,  50 => 17,  46 => 16,  31 => 3,  28 => 2,  11 => 1,);
+        return array (  96 => 47,  93 => 46,  70 => 29,  62 => 24,  55 => 20,  50 => 17,  46 => 16,  31 => 3,  28 => 2,  11 => 1,);
     }
 }
 /* {%extends "TMallClientBundle::layout.html.twig"%}*/
@@ -127,7 +127,7 @@ class __TwigTemplate_e7a96a63cfe74263092806d2dc436b7739173af899468a3ab1ff3ee1189
 /*     */
 /*     */
 /*     */
-/*     */
+/*    */
 /*    */
 /*    <div class="text-left no-left-padding col-md-9 min-height-300">  */
 /*        */
@@ -166,14 +166,14 @@ class __TwigTemplate_e7a96a63cfe74263092806d2dc436b7739173af899468a3ab1ff3ee1189
 /*     */
 /* */
 /*     {% endfor %}*/
-/*     */
+/*      <div class="navigation" style="padding-right: 20">*/
+/*     {{ knp_pagination_render(pagination) }}*/
+/*      </div>*/
 /*   	</div> */
 /*       */
 /*     */
 /*     */
-/*       <div class="navigation" style="padding-right: 20">*/
-/*     {{ knp_pagination_render(pagination) }}*/
-/* </div>*/
+/*      */
 /*     */
 /*     */
 /*     {% endblock %}*/

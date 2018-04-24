@@ -25,7 +25,7 @@ class __TwigTemplate_08050085162eca81339780d0d96baa7eb3dfd9f25fc4f1bcfd0fbf22217
 --------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Name Client:  <td> ";
         // line 5
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["commande"]) ? $context["commande"] : $this->getContext($context, "commande")), "idUser", array()), "getNom", array(), "method"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["commande"]) ? $context["commande"] : $this->getContext($context, "commande")), "idUser", array()), "getUsername", array(), "method"), "html", null, true);
         echo " </td> <br/>
 --------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   Date: <td>   ";
@@ -65,7 +65,7 @@ class __TwigTemplate_08050085162eca81339780d0d96baa7eb3dfd9f25fc4f1bcfd0fbf22217
 /* */
 /*  Name Product:<td> {{commande.idProduit.getTitre()}} </td> <br/>*/
 /* --------------------------------------------------------------------------------------------------------------------------------------------*/
-/* &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Name Client:  <td> {{commande.idUser.getNom()}} </td> <br/>*/
+/* &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Name Client:  <td> {{commande.idUser.getUsername()}} </td> <br/>*/
 /* --------------------------------------------------------------------------------------------------------------------------------------------*/
 /* &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   Date: <td>   {{commande.date|date('d/m/Y')}}   </td><br/>*/
 /* --------------------------------------------------------------------------------------------------------------------------------------------*/

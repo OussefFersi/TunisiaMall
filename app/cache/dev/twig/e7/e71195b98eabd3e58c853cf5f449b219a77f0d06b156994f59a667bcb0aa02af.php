@@ -29,7 +29,6 @@ class __TwigTemplate_136c54df9acd91b8bd02f55e6c8812aedb6de8b887dbfd1304de21771b3
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        echo "<title>GoVoyage | Reset</title>";
     }
 
     // line 6
@@ -87,14 +86,14 @@ class __TwigTemplate_136c54df9acd91b8bd02f55e6c8812aedb6de8b887dbfd1304de21771b3
 
     public function getDebugInfo()
     {
-        return array (  72 => 24,  69 => 23,  66 => 22,  58 => 27,  56 => 22,  39 => 7,  36 => 6,  30 => 5,  11 => 1,);
+        return array (  71 => 24,  68 => 23,  65 => 22,  57 => 27,  55 => 22,  38 => 7,  35 => 6,  30 => 5,  11 => 1,);
     }
 }
 /* {% extends "FOSUserBundle::layout.html.twig" %}*/
 /* */
 /* {% trans_default_domain 'FOSUserBundle' %}*/
 /* */
-/* {% block title %}<title>GoVoyage | Reset</title>{% endblock %}*/
+/* {% block title %}{% endblock %}*/
 /* {% block body %}*/
 /* */
 /*     <div class="content">*/

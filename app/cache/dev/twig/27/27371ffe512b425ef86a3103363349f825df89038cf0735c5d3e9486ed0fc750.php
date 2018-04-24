@@ -88,21 +88,24 @@ class __TwigTemplate_19e1e09a247e22ec97e6d4011b7571ba4346a78e69715a1f0f00089d73e
     public function block_container($context, array $blocks = array())
     {
         // line 54
-        echo "    <h1>Product</h1>
+        echo "    
+    <div class=\"container\">
+    
+    <h1>Product</h1>
 
     <table class=\"table table-hover admin-table\">
         <tbody>
             <tr>
                 <th>Id</th>
                 <td>";
-        // line 60
+        // line 63
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id", array()), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Title</th>
                 <td>";
-        // line 64
+        // line 67
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "titre", array()), "html", null, true);
         echo "</td>
             </tr>
@@ -110,7 +113,7 @@ class __TwigTemplate_19e1e09a247e22ec97e6d4011b7571ba4346a78e69715a1f0f00089d73e
                 <th>Image</th>
                 
                 <td><img  src=\"";
-        // line 69
+        // line 72
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl((("" . $this->getAttribute($this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "photo", array()), "path", array())) . "")), "html", null, true);
         echo "\" alt=\"";
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "photo", array()), "path", array()), "html", null, true);
@@ -119,21 +122,21 @@ class __TwigTemplate_19e1e09a247e22ec97e6d4011b7571ba4346a78e69715a1f0f00089d73e
             <tr>
                 <th>Prix</th>
                 <td>";
-        // line 73
+        // line 76
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "prix", array()), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Quantity</th>
                 <td>";
-        // line 77
+        // line 80
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "quantity", array()), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Category</th>
                 <td>";
-        // line 81
+        // line 84
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "category", array()), "nom", array()), "html", null, true);
         echo "</td>
             </tr>
@@ -143,7 +146,7 @@ class __TwigTemplate_19e1e09a247e22ec97e6d4011b7571ba4346a78e69715a1f0f00089d73e
         <ul class=\"record_actions\">
     <li>
         <a href=\"";
-        // line 88
+        // line 91
         echo $this->env->getExtension('routing')->getPath("produit", array("id" => 1));
         echo "\">
             Back to the list
@@ -151,17 +154,18 @@ class __TwigTemplate_19e1e09a247e22ec97e6d4011b7571ba4346a78e69715a1f0f00089d73e
     </li>
     <li>
         <a href=\"";
-        // line 93
+        // line 96
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("produit_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id", array()))), "html", null, true);
         echo "\">
             Edit
         </a>
     </li>
     <li>";
-        // line 97
+        // line 100
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
         echo "</li>
 </ul>
+    </div>
 ";
     }
 
@@ -177,7 +181,7 @@ class __TwigTemplate_19e1e09a247e22ec97e6d4011b7571ba4346a78e69715a1f0f00089d73e
 
     public function getDebugInfo()
     {
-        return array (  162 => 97,  155 => 93,  147 => 88,  137 => 81,  130 => 77,  123 => 73,  114 => 69,  106 => 64,  99 => 60,  91 => 54,  88 => 53,  52 => 19,  43 => 13,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  165 => 100,  158 => 96,  150 => 91,  140 => 84,  133 => 80,  126 => 76,  117 => 72,  109 => 67,  102 => 63,  91 => 54,  88 => 53,  52 => 19,  43 => 13,  32 => 4,  29 => 3,  11 => 1,);
     }
 }
 /* {% extends "TMallVendorBundle::layout.html.twig" %}*/
@@ -233,6 +237,9 @@ class __TwigTemplate_19e1e09a247e22ec97e6d4011b7571ba4346a78e69715a1f0f00089d73e
 /* */
 /* */
 /* {% block container %}*/
+/*     */
+/*     <div class="container">*/
+/*     */
 /*     <h1>Product</h1>*/
 /* */
 /*     <table class="table table-hover admin-table">*/
@@ -278,5 +285,6 @@ class __TwigTemplate_19e1e09a247e22ec97e6d4011b7571ba4346a78e69715a1f0f00089d73e
 /*     </li>*/
 /*     <li>{{ form(delete_form) }}</li>*/
 /* </ul>*/
+/*     </div>*/
 /* {% endblock %}*/
 /* */

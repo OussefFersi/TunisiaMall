@@ -10,7 +10,6 @@ class __TwigTemplate_3587590520e51ee9a317058d3ed465d49df0178921b0a871f375d5df4f7
         // line 1
         $this->parent = $this->loadTemplate("FOSUserBundle::layout.html.twig", "FOSUserBundle:Registration:confirmed.html.twig", 1);
         $this->blocks = array(
-            'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
             'fos_user_content' => array($this, 'block_fos_user_content'),
         );
@@ -24,12 +23,6 @@ class __TwigTemplate_3587590520e51ee9a317058d3ed465d49df0178921b0a871f375d5df4f7
     protected function doDisplay(array $context, array $blocks = array())
     {
         $this->parent->display($context, array_merge($this->blocks, $blocks));
-    }
-
-    // line 3
-    public function block_title($context, array $blocks = array())
-    {
-        echo "<title>GoVoyage | Register</title>";
     }
 
     // line 4
@@ -93,12 +86,12 @@ class __TwigTemplate_3587590520e51ee9a317058d3ed465d49df0178921b0a871f375d5df4f7
 
     public function getDebugInfo()
     {
-        return array (  81 => 21,  73 => 19,  71 => 18,  66 => 17,  63 => 16,  55 => 22,  53 => 16,  50 => 15,  39 => 5,  36 => 4,  30 => 3,  11 => 1,);
+        return array (  74 => 21,  66 => 19,  64 => 18,  59 => 17,  56 => 16,  48 => 22,  46 => 16,  43 => 15,  32 => 5,  29 => 4,  11 => 1,);
     }
 }
 /* {% extends "FOSUserBundle::layout.html.twig" %}*/
 /* */
-/* {% block title %}<title>GoVoyage | Register</title>{% endblock %}*/
+/* */
 /* {% block body %}*/
 /* */
 /*    */

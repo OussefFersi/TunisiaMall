@@ -10,7 +10,6 @@ class __TwigTemplate_cb30dc5e5718712a8511084a52374bbf40bdf3cbaebb658ff8b9dbe31dc
         // line 1
         $this->parent = $this->loadTemplate("FOSUserBundle::layout.html.twig", "FOSUserBundle:Profile:show.html.twig", 1);
         $this->blocks = array(
-            'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
             'fos_user_content' => array($this, 'block_fos_user_content'),
         );
@@ -24,12 +23,6 @@ class __TwigTemplate_cb30dc5e5718712a8511084a52374bbf40bdf3cbaebb658ff8b9dbe31dc
     protected function doDisplay(array $context, array $blocks = array())
     {
         $this->parent->display($context, array_merge($this->blocks, $blocks));
-    }
-
-    // line 3
-    public function block_title($context, array $blocks = array())
-    {
-        echo "<title>GoVoyage | Sign in</title>";
     }
 
     // line 4
@@ -79,12 +72,12 @@ class __TwigTemplate_cb30dc5e5718712a8511084a52374bbf40bdf3cbaebb658ff8b9dbe31dc
 
     public function getDebugInfo()
     {
-        return array (  67 => 20,  61 => 19,  53 => 14,  49 => 13,  39 => 5,  36 => 4,  30 => 3,  11 => 1,);
+        return array (  60 => 20,  54 => 19,  46 => 14,  42 => 13,  32 => 5,  29 => 4,  11 => 1,);
     }
 }
 /* {% extends "FOSUserBundle::layout.html.twig" %}*/
 /* */
-/* {% block title %}<title>GoVoyage | Sign in</title>{% endblock %}*/
+/* */
 /* {% block body %}*/
 /*     */
 /*     <div class="content">*/

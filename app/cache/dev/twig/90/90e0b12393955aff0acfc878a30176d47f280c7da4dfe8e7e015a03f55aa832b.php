@@ -29,7 +29,6 @@ class __TwigTemplate_8e122a25291e27ac51b6cf9ca0b58199eae742d7e44f0096ffc7aa3a58b
     // line 2
     public function block_title($context, array $blocks = array())
     {
-        echo "<title>GoVoyage | Reset</title>";
     }
 
     // line 3
@@ -74,11 +73,11 @@ class __TwigTemplate_8e122a25291e27ac51b6cf9ca0b58199eae742d7e44f0096ffc7aa3a58b
 
     public function getDebugInfo()
     {
-        return array (  62 => 11,  59 => 10,  56 => 9,  48 => 12,  46 => 9,  39 => 4,  36 => 3,  30 => 2,  11 => 1,);
+        return array (  61 => 11,  58 => 10,  55 => 9,  47 => 12,  45 => 9,  38 => 4,  35 => 3,  30 => 2,  11 => 1,);
     }
 }
 /* {% extends "FOSUserBundle::layout.html.twig" %}*/
-/* {% block title %}<title>GoVoyage | Reset</title>{% endblock %}*/
+/* {% block title %}{% endblock %}*/
 /* {% block body %}*/
 /* */
 /*     */

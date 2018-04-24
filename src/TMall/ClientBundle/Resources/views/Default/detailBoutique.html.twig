@@ -4,7 +4,7 @@
     
     
     
-    
+   
    
    <div class="text-left no-left-padding col-md-9 min-height-300">  
        
@@ -43,14 +43,14 @@
     
 
     {% endfor %}
-    
+     <div class="navigation" style="padding-right: 20">
+    {{ knp_pagination_render(pagination) }}
+     </div>
   	</div> 
       
     
     
-      <div class="navigation" style="padding-right: 20">
-    {{ knp_pagination_render(pagination) }}
-</div>
+     
     
     
     {% endblock %}

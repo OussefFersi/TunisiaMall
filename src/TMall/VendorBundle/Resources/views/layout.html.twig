@@ -32,7 +32,7 @@
 	
 	<div class="col-md-9 text-right">
 	
-		<a class="underline-link language-link left-margin-20px" href="index.php?lang=en">Main Website</a> <a class="underline-link language-link left-margin-20px" href="http://demo.quixstore.com" target="_blank">My Store</a> 
+		<a class="underline-link language-link left-margin-20px" href="{{path('front')}}">Home</a> <a class="underline-link language-link left-margin-20px" href="{{path('tmall_vendor_MyStores')}}" target="_blank">My Store</a> 
 	 
 {% if is_granted("ROLE_USER") %}<a class="underline-link language-link left-margin-20px" href="{{ path('fos_user_security_logout') }}">Logout</a> {% endif %}  
 {% if is_granted("ROLE_USER") %}
@@ -98,45 +98,20 @@
 		<div class="row">
 			
 <div class="col-sm-2 no-right-padding">
-<h5 class="upper">Profile</h5>
-<a class="upper admin-bottom-link" href="index.php?category=profile&action=edit">Edit</a>
-<a class="upper admin-bottom-link" href="index.php?category=profile&action=logo">Logo</a>
-<a class="upper admin-bottom-link" href="index.php?category=profile&action=password">Change Password</a>
-</div>
+	<h5>SOCIAL MEDIA </h5>
+	<a href="#"><img width="60" height="60" src="{{asset('Client/images/facebook.png')}}" title="facebook" alt="facebook"/></a>
+	<a href="#"><img width="60" height="60" src="{{asset('Client/images/twitter.png')}}" title="twitter" alt="twitter"/></a>
+	<a href="#"><img width="60" height="60" src="{{asset('Client/images/youtube.png')}}" title="youtube" alt="youtube"/></a>
+ </div> 
+
+
+
+
 <div class="col-sm-2 no-right-padding">
-<h5 class="upper">Products</h5>
-<a class="upper admin-bottom-link" href="index.php?category=products_manager&action=products">My Products</a>
-<a class="upper admin-bottom-link" href="index.php?category=products_manager&action=products_add">Add New Product</a>
-<a class="upper admin-bottom-link" href="index.php?category=products_manager&action=reviews">Reviews</a>
-</div>
-<div class="col-sm-2 no-right-padding">
-<h5 class="upper">Orders</h5>
-<a class="upper admin-bottom-link" href="index.php?category=orders&action=approve">New Orders</a>
-<a class="upper admin-bottom-link" href="index.php?category=orders&action=rejected">Rejected Orders</a>
-<a class="upper admin-bottom-link" href="index.php?category=orders&action=approved">Approved Orders</a>
-<a class="upper admin-bottom-link" href="index.php?category=orders&action=customers">Customers</a>
-<a class="upper admin-bottom-link" href="index.php?category=orders&action=coupons">Coupons</a>
-<a class="upper admin-bottom-link" href="index.php?category=orders&action=points">Customer Loyalty Program</a>
-</div>
-<div class="col-sm-2 no-right-padding">
-<h5 class="upper">Site Content</h5>
-<a class="upper admin-bottom-link" href="index.php?category=site_management&action=pages_pro">Pages</a>
-<a class="upper admin-bottom-link" href="index.php?category=site_management&action=welcome_text">Welcome Text</a>
-<a class="upper admin-bottom-link" href="index.php?category=site_management&action=news">News</a>
-</div>
-<div class="col-sm-2 no-right-padding">
-<h5 class="upper">Settings</h5>
-<a class="upper admin-bottom-link" href="index.php?category=settings&action=template">Template</a>
-<a class="upper admin-bottom-link" href="index.php?category=settings&action=payment_settings">Payment Settings</a>
-<a class="upper admin-bottom-link" href="index.php?category=settings&action=shipping_zones">Shipping Zones</a>
-<a class="upper admin-bottom-link" href="index.php?category=settings&action=shipping_costs">Shipping Costs</a>
-<a class="upper admin-bottom-link" href="index.php?category=settings&action=taxes">Taxes</a>
-</div>
-<div class="col-sm-2 no-right-padding">
-<h5 class="upper">Statistics</h5>
-<a class="upper admin-bottom-link" href="index.php?category=statistics&action=reports">Reports</a>
-<a class="upper admin-bottom-link" href="index.php?category=statistics&action=orders">Orders</a>
-<a class="upper admin-bottom-link" href="index.php?category=statistics&action=referals">Referrals</a>
+<h5 class="upper">Information</h5>
+<a class="upper admin-bottom-link" href="">Reports</a>
+<a class="upper admin-bottom-link" href="">Orders</a>
+<a class="upper admin-bottom-link" href="">Referrals</a>
 </div>	
 		</div>
 		

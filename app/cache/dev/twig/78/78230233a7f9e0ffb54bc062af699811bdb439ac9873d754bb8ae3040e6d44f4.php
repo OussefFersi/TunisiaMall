@@ -82,7 +82,12 @@ class __TwigTemplate_99713fb01bba39a7ad068b49ef8fe781e9fc262256070b940ad073fc0ca
 \t
 \t<div class=\"col-md-9 text-right\">
 \t
-\t\t<a class=\"underline-link language-link left-margin-20px\" href=\"index.php?lang=en\">Main Website</a> <a class=\"underline-link language-link left-margin-20px\" href=\"http://demo.quixstore.com\" target=\"_blank\">My Store</a> 
+\t\t<a class=\"underline-link language-link left-margin-20px\" href=\"";
+        // line 35
+        echo $this->env->getExtension('routing')->getPath("front");
+        echo "\">Home</a> <a class=\"underline-link language-link left-margin-20px\" href=\"";
+        echo $this->env->getExtension('routing')->getPath("tmall_vendor_MyStores");
+        echo "\" target=\"_blank\">My Store</a> 
 \t 
 ";
         // line 37
@@ -166,45 +171,29 @@ class __TwigTemplate_99713fb01bba39a7ad068b49ef8fe781e9fc262256070b940ad073fc0ca
 \t\t<div class=\"row\">
 \t\t\t
 <div class=\"col-sm-2 no-right-padding\">
-<h5 class=\"upper\">Profile</h5>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=profile&action=edit\">Edit</a>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=profile&action=logo\">Logo</a>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=profile&action=password\">Change Password</a>
-</div>
+\t<h5>SOCIAL MEDIA </h5>
+\t<a href=\"#\"><img width=\"60\" height=\"60\" src=\"";
+        // line 102
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/facebook.png"), "html", null, true);
+        echo "\" title=\"facebook\" alt=\"facebook\"/></a>
+\t<a href=\"#\"><img width=\"60\" height=\"60\" src=\"";
+        // line 103
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/twitter.png"), "html", null, true);
+        echo "\" title=\"twitter\" alt=\"twitter\"/></a>
+\t<a href=\"#\"><img width=\"60\" height=\"60\" src=\"";
+        // line 104
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/youtube.png"), "html", null, true);
+        echo "\" title=\"youtube\" alt=\"youtube\"/></a>
+ </div> 
+
+
+
+
 <div class=\"col-sm-2 no-right-padding\">
-<h5 class=\"upper\">Products</h5>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=products_manager&action=products\">My Products</a>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=products_manager&action=products_add\">Add New Product</a>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=products_manager&action=reviews\">Reviews</a>
-</div>
-<div class=\"col-sm-2 no-right-padding\">
-<h5 class=\"upper\">Orders</h5>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=orders&action=approve\">New Orders</a>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=orders&action=rejected\">Rejected Orders</a>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=orders&action=approved\">Approved Orders</a>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=orders&action=customers\">Customers</a>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=orders&action=coupons\">Coupons</a>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=orders&action=points\">Customer Loyalty Program</a>
-</div>
-<div class=\"col-sm-2 no-right-padding\">
-<h5 class=\"upper\">Site Content</h5>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=site_management&action=pages_pro\">Pages</a>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=site_management&action=welcome_text\">Welcome Text</a>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=site_management&action=news\">News</a>
-</div>
-<div class=\"col-sm-2 no-right-padding\">
-<h5 class=\"upper\">Settings</h5>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=settings&action=template\">Template</a>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=settings&action=payment_settings\">Payment Settings</a>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=settings&action=shipping_zones\">Shipping Zones</a>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=settings&action=shipping_costs\">Shipping Costs</a>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=settings&action=taxes\">Taxes</a>
-</div>
-<div class=\"col-sm-2 no-right-padding\">
-<h5 class=\"upper\">Statistics</h5>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=statistics&action=reports\">Reports</a>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=statistics&action=orders\">Orders</a>
-<a class=\"upper admin-bottom-link\" href=\"index.php?category=statistics&action=referals\">Referrals</a>
+<h5 class=\"upper\">Information</h5>
+<a class=\"upper admin-bottom-link\" href=\"\">Reports</a>
+<a class=\"upper admin-bottom-link\" href=\"\">Orders</a>
+<a class=\"upper admin-bottom-link\" href=\"\">Referrals</a>
 </div>\t
 \t\t</div>
 \t\t
@@ -213,7 +202,7 @@ class __TwigTemplate_99713fb01bba39a7ad068b49ef8fe781e9fc262256070b940ad073fc0ca
 
 \t
 \t<script src=\"";
-        // line 147
+        // line 122
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("vendor/js/bootstrap.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 \t
@@ -252,7 +241,7 @@ class __TwigTemplate_99713fb01bba39a7ad068b49ef8fe781e9fc262256070b940ad073fc0ca
 
     public function getDebugInfo()
     {
-        return array (  239 => 65,  233 => 48,  230 => 47,  217 => 147,  134 => 66,  132 => 65,  116 => 51,  114 => 47,  105 => 40,  99 => 39,  97 => 38,  89 => 37,  78 => 29,  62 => 16,  58 => 15,  54 => 14,  50 => 13,  46 => 12,  42 => 11,  38 => 10,  34 => 9,  30 => 8,  21 => 1,);
+        return array (  228 => 65,  222 => 48,  219 => 47,  206 => 122,  185 => 104,  181 => 103,  177 => 102,  139 => 66,  137 => 65,  121 => 51,  119 => 47,  110 => 40,  104 => 39,  102 => 38,  94 => 37,  87 => 35,  78 => 29,  62 => 16,  58 => 15,  54 => 14,  50 => 13,  46 => 12,  42 => 11,  38 => 10,  34 => 9,  30 => 8,  21 => 1,);
     }
 }
 /* */
@@ -289,7 +278,7 @@ class __TwigTemplate_99713fb01bba39a7ad068b49ef8fe781e9fc262256070b940ad073fc0ca
 /* 	*/
 /* 	<div class="col-md-9 text-right">*/
 /* 	*/
-/* 		<a class="underline-link language-link left-margin-20px" href="index.php?lang=en">Main Website</a> <a class="underline-link language-link left-margin-20px" href="http://demo.quixstore.com" target="_blank">My Store</a> */
+/* 		<a class="underline-link language-link left-margin-20px" href="{{path('front')}}">Home</a> <a class="underline-link language-link left-margin-20px" href="{{path('tmall_vendor_MyStores')}}" target="_blank">My Store</a> */
 /* 	 */
 /* {% if is_granted("ROLE_USER") %}<a class="underline-link language-link left-margin-20px" href="{{ path('fos_user_security_logout') }}">Logout</a> {% endif %}  */
 /* {% if is_granted("ROLE_USER") %}*/
@@ -355,45 +344,20 @@ class __TwigTemplate_99713fb01bba39a7ad068b49ef8fe781e9fc262256070b940ad073fc0ca
 /* 		<div class="row">*/
 /* 			*/
 /* <div class="col-sm-2 no-right-padding">*/
-/* <h5 class="upper">Profile</h5>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=profile&action=edit">Edit</a>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=profile&action=logo">Logo</a>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=profile&action=password">Change Password</a>*/
-/* </div>*/
+/* 	<h5>SOCIAL MEDIA </h5>*/
+/* 	<a href="#"><img width="60" height="60" src="{{asset('Client/images/facebook.png')}}" title="facebook" alt="facebook"/></a>*/
+/* 	<a href="#"><img width="60" height="60" src="{{asset('Client/images/twitter.png')}}" title="twitter" alt="twitter"/></a>*/
+/* 	<a href="#"><img width="60" height="60" src="{{asset('Client/images/youtube.png')}}" title="youtube" alt="youtube"/></a>*/
+/*  </div> */
+/* */
+/* */
+/* */
+/* */
 /* <div class="col-sm-2 no-right-padding">*/
-/* <h5 class="upper">Products</h5>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=products_manager&action=products">My Products</a>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=products_manager&action=products_add">Add New Product</a>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=products_manager&action=reviews">Reviews</a>*/
-/* </div>*/
-/* <div class="col-sm-2 no-right-padding">*/
-/* <h5 class="upper">Orders</h5>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=orders&action=approve">New Orders</a>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=orders&action=rejected">Rejected Orders</a>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=orders&action=approved">Approved Orders</a>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=orders&action=customers">Customers</a>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=orders&action=coupons">Coupons</a>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=orders&action=points">Customer Loyalty Program</a>*/
-/* </div>*/
-/* <div class="col-sm-2 no-right-padding">*/
-/* <h5 class="upper">Site Content</h5>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=site_management&action=pages_pro">Pages</a>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=site_management&action=welcome_text">Welcome Text</a>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=site_management&action=news">News</a>*/
-/* </div>*/
-/* <div class="col-sm-2 no-right-padding">*/
-/* <h5 class="upper">Settings</h5>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=settings&action=template">Template</a>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=settings&action=payment_settings">Payment Settings</a>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=settings&action=shipping_zones">Shipping Zones</a>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=settings&action=shipping_costs">Shipping Costs</a>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=settings&action=taxes">Taxes</a>*/
-/* </div>*/
-/* <div class="col-sm-2 no-right-padding">*/
-/* <h5 class="upper">Statistics</h5>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=statistics&action=reports">Reports</a>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=statistics&action=orders">Orders</a>*/
-/* <a class="upper admin-bottom-link" href="index.php?category=statistics&action=referals">Referrals</a>*/
+/* <h5 class="upper">Information</h5>*/
+/* <a class="upper admin-bottom-link" href="">Reports</a>*/
+/* <a class="upper admin-bottom-link" href="">Orders</a>*/
+/* <a class="upper admin-bottom-link" href="">Referrals</a>*/
 /* </div>	*/
 /* 		</div>*/
 /* 		*/

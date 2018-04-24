@@ -53,35 +53,35 @@ class __TwigTemplate_ed0acda4720e028be9697682bce7742bcefef042512fc2e587e47020749
         echo "\">Home</a>
 
 </li>
-<li class=\"dropdown\"><a class=\"main-top-link\" href=\"\">Profile</a>
-<ul class=\"text-left dropdown-menu\">
-<li ondragstart=\"javascript:dragStart()\" id=\"profile-edit\" class=\"menu-sub-link\"><a href=\"\">Edit</a></li>
-<li ondragstart=\"javascript:dragStart()\" id=\"profile-password\" class=\"menu-sub-link\"><a href=\"\">Change Password</a></li>
-</ul>
+<li class=\"dropdown\"><a class=\"main-top-link\" href=\"";
+        // line 22
+        echo $this->env->getExtension('routing')->getPath("t_mall_client_listBoutique");
+        echo "\">Create Store</a>
+
 </li>
 <li class=\"dropdown\"><a class=\"main-top-link\" href=\"\">Stores</a>
 
 </li>
 <li class=\"dropdown\"><a class=\"main-top-link\" href=\"";
-        // line 31
+        // line 28
         echo $this->env->getExtension('routing')->getPath("t_mall_vendor_approve");
         echo "\">Orders</a>
 <ul class=\"text-left dropdown-menu\">
 <li ondragstart=\"javascript:dragStart()\" id=\"orders-approve\" class=\"menu-sub-link\"><a href=\"";
-        // line 33
+        // line 30
         echo $this->env->getExtension('routing')->getPath("t_mall_vendor_approve");
         echo "\">New Orders</a></li>
 <li ondragstart=\"javascript:dragStart()\" id=\"orders-rejected\" class=\"menu-sub-link\"><a href=\"";
-        // line 34
+        // line 31
         echo $this->env->getExtension('routing')->getPath("t_mall_vendor_rejected");
         echo "\">Rejected Orders</a></li>
 <li ondragstart=\"javascript:dragStart()\" id=\"orders-approved\" class=\"menu-sub-link\"><a href=\"";
-        // line 35
+        // line 32
         echo $this->env->getExtension('routing')->getPath("t_mall_vendor_approved");
         echo "\">Approved Orders</a></li>
 <li ondragstart=\"javascript:dragStart()\" id=\"orders-customers\" class=\"menu-sub-link\"><a href=\"\">Customers</a></li>
 <li ondragstart=\"javascript:dragStart()\" id=\"orders-coupons\" class=\"menu-sub-link\"><a href=\"";
-        // line 37
+        // line 34
         echo $this->env->getExtension('routing')->getPath("t_mall_vendor_addCoupons");
         echo "\">Coupons</a></li>
 <li ondragstart=\"javascript:dragStart()\" id=\"orders-points\" class=\"menu-sub-link\"><a href=\"\">Customer Loyalty Program</a></li>
@@ -121,10 +121,10 @@ class __TwigTemplate_ed0acda4720e028be9697682bce7742bcefef042512fc2e587e47020749
 ";
     }
 
-    // line 74
+    // line 71
     public function block_container($context, array $blocks = array())
     {
-        // line 75
+        // line 72
         echo "
 
 <div class=\"container\">\t
@@ -133,7 +133,7 @@ class __TwigTemplate_ed0acda4720e028be9697682bce7742bcefef042512fc2e587e47020749
 \t\t
 \t\t<div class=\"fright\">
 \t<a class=\"small-tile yellow-back\" href=\"";
-        // line 82
+        // line 79
         echo $this->env->getExtension('routing')->getPath("tmall_vendor_approveOrder");
         echo "\"><img class=\"pull-right\" width=\"32\" src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("vendor/images/icons/approve.png"), "html", null, true);
@@ -156,36 +156,36 @@ class __TwigTemplate_ed0acda4720e028be9697682bce7742bcefef042512fc2e587e47020749
         <th>Quantity</th>
         <th></th>
         ";
-        // line 100
+        // line 97
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
         foreach ($context['_seq'] as $context["_key"] => $context["commande"]) {
-            // line 101
+            // line 98
             echo " 
     
     <tr>
     <td> ";
-            // line 104
+            // line 101
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["commande"], "idProduit", array()), "getTitre", array(), "method"), "html", null, true);
             echo " </td> <br/>
     <td> ";
-            // line 105
+            // line 102
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["commande"], "idUser", array()), "getNom", array(), "method"), "html", null, true);
             echo " </td> <br/>
     <td>   ";
-            // line 106
+            // line 103
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["commande"], "date", array()), "d/m/Y"), "html", null, true);
             echo "   </td><br/>
     <td>   ";
-            // line 107
+            // line 104
             echo twig_escape_filter($this->env, $this->getAttribute($context["commande"], "prix", array()), "html", null, true);
             echo "   </td><br/>
     <td>   ";
-            // line 108
+            // line 105
             echo twig_escape_filter($this->env, $this->getAttribute($context["commande"], "quantite", array()), "html", null, true);
             echo "   </td><br/>
  <td> <a href=\"";
-            // line 109
+            // line 106
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("tmall_vendor_affirmOrder", array("id" => $this->getAttribute($context["commande"], "id", array()))), "html", null, true);
             echo "\" name=\"Approve\" class=\"btn btn-primary\">Approve</a></td> <br/>
 
@@ -195,12 +195,12 @@ class __TwigTemplate_ed0acda4720e028be9697682bce7742bcefef042512fc2e587e47020749
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['commande'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 113
+        // line 110
         echo "  ";
-        // line 114
+        // line 111
         echo "<div class=\"navigation\">
     ";
-        // line 115
+        // line 112
         echo $this->env->getExtension('knp_pagination')->render($this->env, (isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
         echo "
 </div>
@@ -220,12 +220,12 @@ class __TwigTemplate_ed0acda4720e028be9697682bce7742bcefef042512fc2e587e47020749
 
     public function getDebugInfo()
     {
-        return array (  204 => 115,  201 => 114,  199 => 113,  189 => 109,  185 => 108,  181 => 107,  177 => 106,  173 => 105,  169 => 104,  164 => 101,  160 => 100,  137 => 82,  128 => 75,  125 => 74,  85 => 37,  80 => 35,  76 => 34,  72 => 33,  67 => 31,  52 => 19,  43 => 13,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  204 => 112,  201 => 111,  199 => 110,  189 => 106,  185 => 105,  181 => 104,  177 => 103,  173 => 102,  169 => 101,  164 => 98,  160 => 97,  137 => 79,  128 => 72,  125 => 71,  85 => 34,  80 => 32,  76 => 31,  72 => 30,  67 => 28,  58 => 22,  52 => 19,  43 => 13,  32 => 4,  29 => 3,  11 => 1,);
     }
 }
 /* {% extends "TMallVendorBundle::layout.html.twig" %}*/
 /* */
-/* {% block navbar%}*/
+/* {% block navbar %}*/
 /*     */
 /*     */
 /*   <div class="navbar">*/
@@ -244,11 +244,8 @@ class __TwigTemplate_ed0acda4720e028be9697682bce7742bcefef042512fc2e587e47020749
 /* <li class="dropdown"><a class="main-top-link" href="{{path('t_mall_vendor_homepage')}}">Home</a>*/
 /* */
 /* </li>*/
-/* <li class="dropdown"><a class="main-top-link" href="">Profile</a>*/
-/* <ul class="text-left dropdown-menu">*/
-/* <li ondragstart="javascript:dragStart()" id="profile-edit" class="menu-sub-link"><a href="">Edit</a></li>*/
-/* <li ondragstart="javascript:dragStart()" id="profile-password" class="menu-sub-link"><a href="">Change Password</a></li>*/
-/* </ul>*/
+/* <li class="dropdown"><a class="main-top-link" href="{{path('t_mall_client_listBoutique')}}">Create Store</a>*/
+/* */
 /* </li>*/
 /* <li class="dropdown"><a class="main-top-link" href="">Stores</a>*/
 /* */

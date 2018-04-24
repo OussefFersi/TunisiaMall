@@ -57,19 +57,11 @@ function ValueChanged(x)
         echo "\" width=\"18\" height=\"18\" alt=\"\" class=\"pull-right share-icon\"/></a>
  
 
-<h3>Sony DSC-HX50, 18MP, Wi-Fi</h3>
-<div style=\"margin-top:10px;margin-bottom:10px\"><img src=\"";
-        // line 25
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/full-star.gif"), "html", null, true);
-        echo "\" width=\"13\" height=\"12\" alt=\"\"/><img src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/full-star.gif"), "html", null, true);
-        echo "\" width=\"13\" height=\"12\" alt=\"\"/><img src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/full-star.gif"), "html", null, true);
-        echo "\" width=\"13\" height=\"12\" alt=\"\"/><img src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/full-star.gif"), "html", null, true);
-        echo "\" width=\"13\" height=\"12\" alt=\"\"/><img src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/full-star.gif"), "html", null, true);
-        echo "\" width=\"13\" height=\"12\" alt=\"\"/> <span style=\"position:relative;top:-2px;left:20px\">(<a href=\"review-sony-dschx-mp-22.html\">2 Reviews</a>)</span></div>
+<h3>";
+        // line 24
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "titre", array()), "html", null, true);
+        echo "</h3>
+
 <hr/>
 \t
 <div class=\"col-md-5 no-left-padding\">
@@ -165,10 +157,7 @@ function ValueChanged(x)
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "prix", array()), "html", null, true);
         echo "</span><br/></span>  
 </div>
-<div class=\"pull-left l-margin-40\">
- <a class=\"btn btn-md btn-primary\" href=\"javascript:AddToCart('add_to_cart5cf5.html?lang=en&amp;vendor=bestcameras&amp;quantity=1&amp;action=add&amp;id=22')\">Buy Now</a>
-\t
-</div>
+
 <div class=\"clear\"></div>
 <hr/>
 
@@ -195,7 +184,7 @@ function ValueChanged(x)
 
     public function getDebugInfo()
     {
-        return array (  165 => 76,  142 => 55,  131 => 52,  128 => 51,  124 => 50,  117 => 46,  109 => 43,  90 => 33,  84 => 32,  80 => 31,  63 => 25,  56 => 21,  52 => 20,  48 => 19,  31 => 4,  28 => 3,  11 => 2,);
+        return array (  157 => 76,  134 => 55,  123 => 52,  120 => 51,  116 => 50,  109 => 46,  101 => 43,  82 => 33,  76 => 32,  72 => 31,  62 => 24,  56 => 21,  52 => 20,  48 => 19,  31 => 4,  28 => 3,  11 => 2,);
     }
 }
 /* */
@@ -221,8 +210,8 @@ function ValueChanged(x)
 /* <a rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://www.quixstore.com/product-sony-dschx-mp-22.html" target="_blank"><img src="{{asset('Client/images/facebook.gif')}}" width="18" height="18" alt="" class="pull-right share-icon"/></a>*/
 /*  */
 /* */
-/* <h3>Sony DSC-HX50, 18MP, Wi-Fi</h3>*/
-/* <div style="margin-top:10px;margin-bottom:10px"><img src="{{asset('Client/images/full-star.gif')}}" width="13" height="12" alt=""/><img src="{{asset('Client/images/full-star.gif')}}" width="13" height="12" alt=""/><img src="{{asset('Client/images/full-star.gif')}}" width="13" height="12" alt=""/><img src="{{asset('Client/images/full-star.gif')}}" width="13" height="12" alt=""/><img src="{{asset('Client/images/full-star.gif')}}" width="13" height="12" alt=""/> <span style="position:relative;top:-2px;left:20px">(<a href="review-sony-dschx-mp-22.html">2 Reviews</a>)</span></div>*/
+/* <h3>{{entity.titre}}</h3>*/
+/* */
 /* <hr/>*/
 /* 	*/
 /* <div class="col-md-5 no-left-padding">*/
@@ -275,10 +264,7 @@ function ValueChanged(x)
 /* <div class="pull-left">*/
 /* 	<span class="price_style">Price: ¢{{entity.prix}}</span><br/></span>  */
 /* </div>*/
-/* <div class="pull-left l-margin-40">*/
-/*  <a class="btn btn-md btn-primary" href="javascript:AddToCart('add_to_cart5cf5.html?lang=en&amp;vendor=bestcameras&amp;quantity=1&amp;action=add&amp;id=22')">Buy Now</a>*/
-/* 	*/
-/* </div>*/
+/* */
 /* <div class="clear"></div>*/
 /* <hr/>*/
 /* */

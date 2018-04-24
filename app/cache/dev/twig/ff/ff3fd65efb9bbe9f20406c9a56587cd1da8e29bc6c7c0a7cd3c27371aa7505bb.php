@@ -10,7 +10,6 @@ class __TwigTemplate_0a3d7b719fa116487b7a924e80a949c21eb5364b85e3ce4514b6dff0d99
         // line 1
         $this->parent = $this->loadTemplate("FOSUserBundle::layout.html.twig", "FOSUserBundle:Registration:checkEmail.html.twig", 1);
         $this->blocks = array(
-            'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
             'fos_user_content' => array($this, 'block_fos_user_content'),
         );
@@ -24,11 +23,6 @@ class __TwigTemplate_0a3d7b719fa116487b7a924e80a949c21eb5364b85e3ce4514b6dff0d99
     protected function doDisplay(array $context, array $blocks = array())
     {
         $this->parent->display($context, array_merge($this->blocks, $blocks));
-    }
-
-    // line 5
-    public function block_title($context, array $blocks = array())
-    {
     }
 
     // line 6
@@ -85,14 +79,14 @@ class __TwigTemplate_0a3d7b719fa116487b7a924e80a949c21eb5364b85e3ce4514b6dff0d99
 
     public function getDebugInfo()
     {
-        return array (  70 => 22,  67 => 21,  56 => 24,  54 => 21,  38 => 7,  35 => 6,  30 => 5,  11 => 1,);
+        return array (  64 => 22,  61 => 21,  50 => 24,  48 => 21,  32 => 7,  29 => 6,  11 => 1,);
     }
 }
 /* {% extends "FOSUserBundle::layout.html.twig" %}*/
 /* */
 /* {% trans_default_domain 'FOSUserBundle' %}*/
 /* */
-/* {% block title %}{% endblock %}*/
+/* */
 /* {% block body %}*/
 /* <div class="content">*/
 /*         <div id="middle">*/

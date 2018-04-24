@@ -41,7 +41,7 @@ class produit
     /**
      * @var string
      *
-     * @ORM\Column(name="titire", type="string", length=100)
+     * @ORM\Column(name="titre", type="string", length=100)
      */
     private $titre;
     

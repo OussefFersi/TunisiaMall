@@ -10,7 +10,6 @@ class __TwigTemplate_ca708c5293536283ec7a9f8f9c2d4ca342d7abade09710498348b746b2e
         $this->parent = false;
 
         $this->blocks = array(
-            'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
         );
     }
@@ -19,20 +18,12 @@ class __TwigTemplate_ca708c5293536283ec7a9f8f9c2d4ca342d7abade09710498348b746b2e
     {
         // line 2
         echo "
+
 ";
-        // line 3
-        $this->displayBlock('title', $context, $blocks);
         // line 4
         $this->displayBlock('body', $context, $blocks);
     }
 
-    // line 3
-    public function block_title($context, array $blocks = array())
-    {
-        echo "<title>GoVoyage | Sign in</title>";
-    }
-
-    // line 4
     public function block_body($context, array $blocks = array())
     {
         // line 5
@@ -113,12 +104,12 @@ class __TwigTemplate_ca708c5293536283ec7a9f8f9c2d4ca342d7abade09710498348b746b2e
 
     public function getDebugInfo()
     {
-        return array (  104 => 38,  94 => 31,  89 => 29,  85 => 28,  71 => 17,  67 => 16,  63 => 15,  59 => 14,  55 => 13,  51 => 12,  47 => 11,  39 => 5,  36 => 4,  30 => 3,  26 => 4,  24 => 3,  21 => 2,);
+        return array (  95 => 38,  85 => 31,  80 => 29,  76 => 28,  62 => 17,  58 => 16,  54 => 15,  50 => 14,  46 => 13,  42 => 12,  38 => 11,  30 => 5,  24 => 4,  20 => 2,);
     }
 }
 /* {% trans_default_domain 'FOSUserBundle' %}*/
 /* */
-/* {% block title %}<title>GoVoyage | Sign in</title>{% endblock %}*/
+/* */
 /* {% block body %}*/
 /* */
 /*     <div class="content">*/

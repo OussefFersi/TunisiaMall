@@ -304,67 +304,70 @@ google.maps.event.addDomListener(window, 'load', initialize);
 \t\t\t<div class=\"col-md-3\">
 \t<h5>ABOUT</h5>
 \t
-\t\t\t\t\t\t<a class=\"upper\" href=\"index.html\">Home</a>
+\t\t\t\t\t\t<a class=\"upper\" href=\"";
+        // line 221
+        echo $this->env->getExtension('routing')->getPath("front");
+        echo "\">Home</a>
 \t\t\t\t\t
-\t\t\t\t\t\t<a class=\"upper\" href=\"en_Create%2byour%2bstore.html\">Create your store</a>
+\t\t\t\t\t\t
 \t\t\t\t\t
-\t\t\t\t\t\t<a class=\"upper\" href=\"en_About%2bus.html\">About us</a>
+\t\t\t\t\t\t<a class=\"upper\" href=\"";
+        // line 225
+        echo $this->env->getExtension('routing')->getPath("t_mall_client_aboutUs");
+        echo "\">About us</a>
 \t\t\t\t\t
-\t\t\t\t\t\t<a class=\"upper\" href=\"en_Contact.html\">Contact</a>
+\t\t\t\t\t\t<a class=\"upper\" href=\"";
+        // line 227
+        echo $this->env->getExtension('routing')->getPath("t_mall_client_contact_page");
+        echo "\">Contact</a>
 \t\t\t\t\t </div>
-<div class=\"col-md-3\">
-\t<h5>INFORMATION</h5>
-\t<a href=\"terms.html\">TERMS AND CONDITIONS</a> 
-\t<a href=\"faq.html\">FAQ</a>
- </div>
+
 <div class=\"col-md-3\">
 \t<h5>OUR OFFERS</h5>
-\t<a class=\"upper\" href=\"en-mod-categories.html\">Shop by Category</a>
+\t
 \t<a class=\"upper\" href=\"";
-        // line 237
+        // line 233
         echo $this->env->getExtension('routing')->getPath("t_mall_client_boutiqueDetail");
         echo "\">Stores</a>
-\t<a class=\"upper\" href=\"enproducts.html\">Special Offers</a>
-\t<a class=\"upper\" href=\"en-mod-top_rated.html\">Top Rated</a>
-\t<a class=\"upper\" href=\"en-mod-recent_reviews.html\">Reviews</a>
+\t
 
  </div>
 <div id=\"socialMedia\" class=\"col-md-3 pull-right\">
 \t<h5>SOCIAL MEDIA </h5>
 \t<a href=\"#\"><img width=\"60\" height=\"60\" src=\"";
-        // line 245
+        // line 239
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/facebook.png"), "html", null, true);
         echo "\" title=\"facebook\" alt=\"facebook\"/></a>
 \t<a href=\"#\"><img width=\"60\" height=\"60\" src=\"";
-        // line 246
+        // line 240
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/twitter.png"), "html", null, true);
         echo "\" title=\"twitter\" alt=\"twitter\"/></a>
 \t<a href=\"#\"><img width=\"60\" height=\"60\" src=\"";
-        // line 247
+        // line 241
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/youtube.png"), "html", null, true);
         echo "\" title=\"youtube\" alt=\"youtube\"/></a>
  </div> 
 \t\t </div>
-\t\t<p class=\"pull-right\">2014 &copy; QuixStore.com</p>
+\t\t<p class=\"pull-right\">2016 &copy; Tunisia Mall</p>
 \t</div>
 \t</div>
 
 \t
     
     <script src=\"";
-        // line 256
+        // line 250
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 
 \t
 
 \t<script src=\"";
-        // line 260
+        // line 254
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/js/login.js"), "html", null, true);
         echo "\"></script>
 <div id=\"main-login-form\">
 \t<a href=\"javascript:HideLogin()\"><img class=\"close-login-icon\" alt=\"close\" src=\"";
-        // line 262
+        // line 256
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/closeicon.png"), "html", null, true);
         echo "\"/></a>
 \t<h3 class=\"lfloat\" id=\"top_msg_header\">
@@ -430,7 +433,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 \t
 \tThe product was added successfully to your cart!\t<br/><br/>
 \t<a class=\"underline-link\" href=\"javascript:ShowCart()\"><img src=\"";
-        // line 325
+        // line 319
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Client/images/cart-m.png"), "html", null, true);
         echo "\"/></a>
 \t<br/>
@@ -447,7 +450,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 \t\tfunction ShowCart()
 \t\t{
 \t\t\tdocument.location.href='";
-        // line 339
+        // line 333
         echo $this->env->getExtension('routing')->getPath("t_mall_client_cart");
         echo "';
 \t\t}
@@ -480,7 +483,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
     public function getDebugInfo()
     {
-        return array (  467 => 141,  462 => 131,  451 => 339,  434 => 325,  368 => 262,  363 => 260,  356 => 256,  344 => 247,  340 => 246,  336 => 245,  325 => 237,  289 => 204,  225 => 142,  223 => 141,  212 => 132,  210 => 131,  189 => 113,  177 => 104,  145 => 74,  139 => 72,  137 => 71,  129 => 70,  123 => 69,  117 => 68,  113 => 67,  109 => 66,  104 => 64,  96 => 58,  94 => 57,  84 => 50,  49 => 18,  45 => 17,  41 => 16,  36 => 14,  21 => 1,);
+        return array (  470 => 141,  465 => 131,  454 => 333,  437 => 319,  371 => 256,  366 => 254,  359 => 250,  347 => 241,  343 => 240,  339 => 239,  330 => 233,  321 => 227,  316 => 225,  309 => 221,  289 => 204,  225 => 142,  223 => 141,  212 => 132,  210 => 131,  189 => 113,  177 => 104,  145 => 74,  139 => 72,  137 => 71,  129 => 70,  123 => 69,  117 => 68,  113 => 67,  109 => 66,  104 => 64,  96 => 58,  94 => 57,  84 => 50,  49 => 18,  45 => 17,  41 => 16,  36 => 14,  21 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -703,26 +706,20 @@ google.maps.event.addDomListener(window, 'load', initialize);
 /* 			<div class="col-md-3">*/
 /* 	<h5>ABOUT</h5>*/
 /* 	*/
-/* 						<a class="upper" href="index.html">Home</a>*/
+/* 						<a class="upper" href="{{path('front')}}">Home</a>*/
 /* 					*/
-/* 						<a class="upper" href="en_Create%2byour%2bstore.html">Create your store</a>*/
+/* 						*/
 /* 					*/
-/* 						<a class="upper" href="en_About%2bus.html">About us</a>*/
+/* 						<a class="upper" href="{{path('t_mall_client_aboutUs')}}">About us</a>*/
 /* 					*/
-/* 						<a class="upper" href="en_Contact.html">Contact</a>*/
+/* 						<a class="upper" href="{{path('t_mall_client_contact_page')}}">Contact</a>*/
 /* 					 </div>*/
-/* <div class="col-md-3">*/
-/* 	<h5>INFORMATION</h5>*/
-/* 	<a href="terms.html">TERMS AND CONDITIONS</a> */
-/* 	<a href="faq.html">FAQ</a>*/
-/*  </div>*/
+/* */
 /* <div class="col-md-3">*/
 /* 	<h5>OUR OFFERS</h5>*/
-/* 	<a class="upper" href="en-mod-categories.html">Shop by Category</a>*/
+/* 	*/
 /* 	<a class="upper" href="{{path('t_mall_client_boutiqueDetail')}}">Stores</a>*/
-/* 	<a class="upper" href="enproducts.html">Special Offers</a>*/
-/* 	<a class="upper" href="en-mod-top_rated.html">Top Rated</a>*/
-/* 	<a class="upper" href="en-mod-recent_reviews.html">Reviews</a>*/
+/* 	*/
 /* */
 /*  </div>*/
 /* <div id="socialMedia" class="col-md-3 pull-right">*/
@@ -732,7 +729,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 /* 	<a href="#"><img width="60" height="60" src="{{asset('Client/images/youtube.png')}}" title="youtube" alt="youtube"/></a>*/
 /*  </div> */
 /* 		 </div>*/
-/* 		<p class="pull-right">2014 &copy; QuixStore.com</p>*/
+/* 		<p class="pull-right">2016 &copy; Tunisia Mall</p>*/
 /* 	</div>*/
 /* 	</div>*/
 /* */

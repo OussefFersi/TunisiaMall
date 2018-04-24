@@ -36,6 +36,10 @@ class __TwigTemplate_dee1acbe7f3e92475fdd9bc61df695e7238566c1f0a3af27f93b00c358e
         echo ": ";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "email", array()), "html", null, true);
         echo "</h4>
+    <h3>";
+        // line 12
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "roles", array()), 0, array()), "html", null, true);
+        echo "</h3>
     </div>
     </div>
     </div>
@@ -56,7 +60,7 @@ class __TwigTemplate_dee1acbe7f3e92475fdd9bc61df695e7238566c1f0a3af27f93b00c358e
 
     public function getDebugInfo()
     {
-        return array (  35 => 11,  29 => 10,  19 => 2,);
+        return array (  41 => 12,  35 => 11,  29 => 10,  19 => 2,);
     }
 }
 /* {% trans_default_domain 'FOSUserBundle' %}*/
@@ -70,6 +74,7 @@ class __TwigTemplate_dee1acbe7f3e92475fdd9bc61df695e7238566c1f0a3af27f93b00c358e
 /*                         <h3>Votre profil :</h3>*/
 /*     <h4>{{ 'profile.show.username'|trans }}: {{ user.username }}</h4></br>*/
 /*     <h4>{{ 'profile.show.email'|trans }}: {{ user.email }}</h4>*/
+/*     <h3>{{user.roles.0}}</h3>*/
 /*     </div>*/
 /*     </div>*/
 /*     </div>*/

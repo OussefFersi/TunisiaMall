@@ -53,9 +53,7 @@ class __TwigTemplate_c22037e8807ab289443e0dd0b568c1ec0959f340137712f424a4b7ee13c
         echo "\">My Stores</a>
 
 </li>
-<li class=\"dropdown\"><a class=\"main-top-link\" href=\"\">????</a>
 
-</li>
 
 
 
@@ -86,85 +84,85 @@ class __TwigTemplate_c22037e8807ab289443e0dd0b568c1ec0959f340137712f424a4b7ee13c
 ";
     }
 
-    // line 54
+    // line 52
     public function block_container($context, array $blocks = array())
     {
-        // line 55
+        // line 53
         echo "    <h1>Product edit</h1>
     <div>
   
 ";
-        // line 58
+        // line 56
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'form_start');
         echo "  
 <table class=\"table table-hover admin-table\">
     <tr >
         <td> ";
-        // line 61
+        // line 59
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "titre", array()), 'label');
         echo "</td>
        <td> ";
-        // line 62
+        // line 60
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "titre", array()), 'errors');
         echo "</td>
        <td> ";
-        // line 63
+        // line 61
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "titre", array()), 'widget');
         echo "</td>
     </tr>
     <tr >
       <td>  ";
-        // line 66
+        // line 64
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "category", array()), 'label');
         echo "</td>
        <td> ";
-        // line 67
+        // line 65
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "category", array()), 'errors');
         echo "</td>
        <td> ";
-        // line 68
+        // line 66
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "category", array()), 'widget');
         echo "</td>
     </tr>
      <tr>
       <td>  ";
-        // line 71
+        // line 69
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "quantity", array()), 'label');
         echo "</td>
        <td> ";
-        // line 72
+        // line 70
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "quantity", array()), 'errors');
         echo "</td>
        <td> ";
-        // line 73
+        // line 71
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "quantity", array()), 'widget');
         echo "</td>
     </tr>
     <tr>
        <td> ";
-        // line 76
+        // line 74
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "prix", array()), 'label');
         echo "</td>
        <td> ";
-        // line 77
+        // line 75
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "prix", array()), 'errors');
         echo "</td>
       <td>  ";
-        // line 78
+        // line 76
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "prix", array()), 'widget');
         echo "</td>
     </tr>
     <tr>
       <td>  ";
-        // line 81
+        // line 79
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "photo", array()), 'label');
         echo "</td>
        <td> ";
-        // line 82
+        // line 80
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "photo", array()), 'errors');
         echo "</td>
        <td> ";
-        // line 83
+        // line 81
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "photo", array()), 'widget');
         echo "</td>
     </tr>
@@ -172,13 +170,13 @@ class __TwigTemplate_c22037e8807ab289443e0dd0b568c1ec0959f340137712f424a4b7ee13c
        <td></td>
        <td></td>
       <td>  ";
-        // line 88
+        // line 86
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "submit", array()), 'widget');
         echo "</td>
     </tr>
 </table>
 ";
-        // line 91
+        // line 89
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'form_end');
         echo "
 
@@ -189,14 +187,14 @@ class __TwigTemplate_c22037e8807ab289443e0dd0b568c1ec0959f340137712f424a4b7ee13c
         
  
         <a href=\"";
-        // line 99
+        // line 97
         echo $this->env->getExtension('routing')->getPath("produit", array("id" => 1));
         echo "\">
             Back to the list
         </a>
     
     ";
-        // line 103
+        // line 101
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
         echo "
    </div>
@@ -215,7 +213,7 @@ class __TwigTemplate_c22037e8807ab289443e0dd0b568c1ec0959f340137712f424a4b7ee13c
 
     public function getDebugInfo()
     {
-        return array (  200 => 103,  193 => 99,  182 => 91,  176 => 88,  168 => 83,  164 => 82,  160 => 81,  154 => 78,  150 => 77,  146 => 76,  140 => 73,  136 => 72,  132 => 71,  126 => 68,  122 => 67,  118 => 66,  112 => 63,  108 => 62,  104 => 61,  98 => 58,  93 => 55,  90 => 54,  52 => 20,  43 => 14,  32 => 5,  29 => 4,  11 => 1,);
+        return array (  198 => 101,  191 => 97,  180 => 89,  174 => 86,  166 => 81,  162 => 80,  158 => 79,  152 => 76,  148 => 75,  144 => 74,  138 => 71,  134 => 70,  130 => 69,  124 => 66,  120 => 65,  116 => 64,  110 => 61,  106 => 60,  102 => 59,  96 => 56,  91 => 53,  88 => 52,  52 => 20,  43 => 14,  32 => 5,  29 => 4,  11 => 1,);
     }
 }
 /* {% extends "TMallVendorBundle::layout.html.twig" %}*/
@@ -240,9 +238,7 @@ class __TwigTemplate_c22037e8807ab289443e0dd0b568c1ec0959f340137712f424a4b7ee13c
 /* <li class="dropdown"><a class="main-top-link" href="{{path('tmall_vendor_MyStores')}}">My Stores</a>*/
 /* */
 /* </li>*/
-/* <li class="dropdown"><a class="main-top-link" href="">????</a>*/
 /* */
-/* </li>*/
 /* */
 /* */
 /* */

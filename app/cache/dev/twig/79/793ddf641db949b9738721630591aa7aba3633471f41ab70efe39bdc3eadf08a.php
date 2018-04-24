@@ -29,7 +29,6 @@ class __TwigTemplate_e4a32ad86526961c0fd2725836faefd93c6a4f783af9a1ba6eaf935aac1
     // line 2
     public function block_title($context, array $blocks = array())
     {
-        echo "<title>GoVoyage | </title>";
     }
 
     // line 3
@@ -112,11 +111,11 @@ class __TwigTemplate_e4a32ad86526961c0fd2725836faefd93c6a4f783af9a1ba6eaf935aac1
 
     public function getDebugInfo()
     {
-        return array (  100 => 28,  97 => 27,  94 => 26,  86 => 29,  84 => 26,  71 => 16,  67 => 15,  63 => 14,  59 => 13,  55 => 12,  51 => 11,  47 => 10,  39 => 4,  36 => 3,  30 => 2,  11 => 1,);
+        return array (  99 => 28,  96 => 27,  93 => 26,  85 => 29,  83 => 26,  70 => 16,  66 => 15,  62 => 14,  58 => 13,  54 => 12,  50 => 11,  46 => 10,  38 => 4,  35 => 3,  30 => 2,  11 => 1,);
     }
 }
 /* {% extends "FOSUserBundle::layout.html.twig" %}*/
-/* {% block title %}<title>GoVoyage | </title>{% endblock %}*/
+/* {% block title %}{% endblock %}*/
 /* {% block body %}*/
 /* */
 /*     <div class="content">*/

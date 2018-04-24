@@ -49,7 +49,7 @@ class __TwigTemplate_d5cadcd30e09683c08dce300894caa3559502da3b68c254b55396c19fea
             
 <li class=\"dropdown\"><a class=\"main-top-link\" href=\"";
         // line 20
-        echo $this->env->getExtension('routing')->getPath("t_mall_vendor_homepage");
+        echo $this->env->getExtension('routing')->getPath("front");
         echo "\">Home</a>
 
 </li>
@@ -82,23 +82,12 @@ class __TwigTemplate_d5cadcd30e09683c08dce300894caa3559502da3b68c254b55396c19fea
         // line 36
         echo $this->env->getExtension('routing')->getPath("t_mall_vendor_approved");
         echo "\">Approved Orders</a></li>
-<li ondragstart=\"javascript:dragStart()\" id=\"orders-customers\" class=\"menu-sub-link\"><a href=\"\">Customers</a></li>
-<li ondragstart=\"javascript:dragStart()\" id=\"orders-coupons\" class=\"menu-sub-link\"><a href=\"";
-        // line 38
-        echo $this->env->getExtension('routing')->getPath("t_mall_vendor_addCoupons");
-        echo "\">Coupons</a></li>
-<li ondragstart=\"javascript:dragStart()\" id=\"orders-points\" class=\"menu-sub-link\"><a href=\"\">Customer Loyalty Program</a></li>
-</ul>
-</li>
-
-
-<li class=\"dropdown\"><a class=\"main-top-link\" href=\"\">Statistics</a>
-<ul class=\"text-left dropdown-menu\">
-<li ondragstart=\"javascript:dragStart()\" id=\"statistics-reports\" class=\"menu-sub-link\"><a href=\"\">Reports</a></li>
-<li ondragstart=\"javascript:dragStart()\" id=\"statistics-orders\" class=\"menu-sub-link\"><a href=\"\">Orders</a></li>
 
 </ul>
 </li>
+
+
+
 \t\t </ul>
 \t\t\t\t\t
         </div>  
@@ -124,13 +113,13 @@ class __TwigTemplate_d5cadcd30e09683c08dce300894caa3559502da3b68c254b55396c19fea
 ";
     }
 
-    // line 75
+    // line 67
     public function block_container($context, array $blocks = array())
     {
-        // line 76
+        // line 68
         echo " <div class=\"container\">
     <link rel=\"stylesheet\" href=\"";
-        // line 77
+        // line 69
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("css/bootstrap.min.css"), "html", null, true);
         echo "\" integrity=\"sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7\" crossorigin=\"anonymous\">
 
@@ -138,25 +127,25 @@ class __TwigTemplate_d5cadcd30e09683c08dce300894caa3559502da3b68c254b55396c19fea
 
  
     ";
-        // line 83
+        // line 75
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
     ";
-        // line 84
+        // line 76
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
         echo "
     <div class=\"form-group\">
     
         ";
-        // line 87
+        // line 79
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nom", array()), 'label');
         echo "
         ";
-        // line 88
+        // line 80
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nom", array()), 'errors');
         echo "
         ";
-        // line 89
+        // line 81
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nom", array()), 'widget');
         echo "
     
@@ -164,15 +153,15 @@ class __TwigTemplate_d5cadcd30e09683c08dce300894caa3559502da3b68c254b55396c19fea
     <div class=\"form-group\">
     
         ";
-        // line 94
+        // line 86
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "cordonne", array()), 'label');
         echo "
         ";
-        // line 95
+        // line 87
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "cordonne", array()), 'errors');
         echo "
         ";
-        // line 96
+        // line 88
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "cordonne", array()), 'widget');
         echo "
     
@@ -181,35 +170,35 @@ class __TwigTemplate_d5cadcd30e09683c08dce300894caa3559502da3b68c254b55396c19fea
     <div class=\"form-group\">
     
         ";
-        // line 102
+        // line 94
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "photo", array()), 'label');
         echo "
         ";
-        // line 103
+        // line 95
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "photo", array()), 'errors');
         echo "
         ";
-        // line 104
+        // line 96
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "photo", array()), 'widget');
         echo "
      
     </div>
 ";
-        // line 107
+        // line 99
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 ";
-        // line 125
+        // line 117
         echo "    
 
 
 
 <script src=\"";
-        // line 129
+        // line 121
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "\"> </script>
 <script src=\"";
-        // line 130
+        // line 122
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery.js"), "html", null, true);
         echo "\"> </script>
 
@@ -233,7 +222,7 @@ class __TwigTemplate_d5cadcd30e09683c08dce300894caa3559502da3b68c254b55396c19fea
 
     public function getDebugInfo()
     {
-        return array (  213 => 130,  209 => 129,  203 => 125,  199 => 107,  193 => 104,  189 => 103,  185 => 102,  176 => 96,  172 => 95,  168 => 94,  160 => 89,  156 => 88,  152 => 87,  146 => 84,  142 => 83,  134 => 77,  131 => 76,  128 => 75,  88 => 38,  83 => 36,  79 => 35,  75 => 34,  70 => 32,  64 => 29,  52 => 20,  43 => 14,  32 => 5,  29 => 4,  11 => 1,);
+        return array (  202 => 122,  198 => 121,  192 => 117,  188 => 99,  182 => 96,  178 => 95,  174 => 94,  165 => 88,  161 => 87,  157 => 86,  149 => 81,  145 => 80,  141 => 79,  135 => 76,  131 => 75,  123 => 69,  120 => 68,  117 => 67,  83 => 36,  79 => 35,  75 => 34,  70 => 32,  64 => 29,  52 => 20,  43 => 14,  32 => 5,  29 => 4,  11 => 1,);
     }
 }
 /* {%extends "TMallVendorBundle::layout.html.twig"%}*/
@@ -255,7 +244,7 @@ class __TwigTemplate_d5cadcd30e09683c08dce300894caa3559502da3b68c254b55396c19fea
 /*         <div id="nav_menu" class="navbar-collapse">*/
 /*           <ul class="main-top-menu nav navbar-nav">*/
 /*             */
-/* <li class="dropdown"><a class="main-top-link" href="{{path('t_mall_vendor_homepage')}}">Home</a>*/
+/* <li class="dropdown"><a class="main-top-link" href="{{path('front')}}">Home</a>*/
 /* */
 /* </li>*/
 /* */
@@ -272,20 +261,12 @@ class __TwigTemplate_d5cadcd30e09683c08dce300894caa3559502da3b68c254b55396c19fea
 /* <li ondragstart="javascript:dragStart()" id="orders-approve" class="menu-sub-link"><a href="{{path('t_mall_vendor_approve')}}">New Orders</a></li>*/
 /* <li ondragstart="javascript:dragStart()" id="orders-rejected" class="menu-sub-link"><a href="{{path('t_mall_vendor_rejected')}}">Rejected Orders</a></li>*/
 /* <li ondragstart="javascript:dragStart()" id="orders-approved" class="menu-sub-link"><a href="{{path('t_mall_vendor_approved')}}">Approved Orders</a></li>*/
-/* <li ondragstart="javascript:dragStart()" id="orders-customers" class="menu-sub-link"><a href="">Customers</a></li>*/
-/* <li ondragstart="javascript:dragStart()" id="orders-coupons" class="menu-sub-link"><a href="{{path('t_mall_vendor_addCoupons')}}">Coupons</a></li>*/
-/* <li ondragstart="javascript:dragStart()" id="orders-points" class="menu-sub-link"><a href="">Customer Loyalty Program</a></li>*/
-/* </ul>*/
-/* </li>*/
-/* */
-/* */
-/* <li class="dropdown"><a class="main-top-link" href="">Statistics</a>*/
-/* <ul class="text-left dropdown-menu">*/
-/* <li ondragstart="javascript:dragStart()" id="statistics-reports" class="menu-sub-link"><a href="">Reports</a></li>*/
-/* <li ondragstart="javascript:dragStart()" id="statistics-orders" class="menu-sub-link"><a href="">Orders</a></li>*/
 /* */
 /* </ul>*/
 /* </li>*/
+/* */
+/* */
+/* */
 /* 		 </ul>*/
 /* 					*/
 /*         </div>  */

@@ -1,3 +1,32 @@
 tmall_admin_homepage:
     path:     /
     defaults: { _controller: TmallAdminBundle:Default:index }
+
+
+    
+productslist:
+    path:     /productslist
+    defaults: { _controller: TmallAdminBundle:Default:listProduct }
+    
+boutiqueslist:  
+     path:     /boutiqueslist
+     defaults: { _controller: TmallAdminBundle:Boutique:index }
+     
+e-commerce:  
+     path:     /ecommerce
+     defaults: { _controller: TmallAdminBundle:Default:ecommerce } 
+     
+t_mall_entity_utilisateur:
+    resource: "@TmallAdminBundle/Resources/config/routing/utilisateur.yml"
+    prefix:   /utilisateur  
+    
+boutique_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "TmallAdminBundle:Boutique:delete" }
+    methods:  [POST, DELETE] 
+    
+product_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "TmallAdminBundle:Default:delete" }
+    methods:  [POST, DELETE]       
+

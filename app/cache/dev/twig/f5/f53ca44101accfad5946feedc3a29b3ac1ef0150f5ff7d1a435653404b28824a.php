@@ -56,9 +56,7 @@ class __TwigTemplate_8a990e3ba95d533d79dbb048a741c310504e72cfffab708401add717fef
 <li class=\"dropdown\"><a class=\"main-top-link\" href=\"\">Profile</a>
 
 </li>
-<li class=\"dropdown\"><a class=\"main-top-link\" href=\"\">????</a>
 
-</li>
 
 
 
@@ -88,25 +86,15 @@ class __TwigTemplate_8a990e3ba95d533d79dbb048a741c310504e72cfffab708401add717fef
 ";
     }
 
-    // line 56
+    // line 54
     public function block_container($context, array $blocks = array())
     {
-        // line 57
+        // line 55
         echo "   
 <div class=\"container\">\t
 \t
 \t<div id=\"main_content\" class=\"text-left col-md-12 min-height-300\">
 \t\t
-\t\t<div class=\"fright\">
-\t<a class=\"small-tile green-back\" href=\"index.php?category=products_manager&amp;action=products_add\"><img class=\"pull-right\" width=\"32\" src=\"";
-        // line 63
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("vendor/images/icons/products_add.png"), "html", null, true);
-        echo "\"><h3 class=\"h3-tile\">Add New Product</h3>
-\t</a><a class=\"small-tile lila-back\" href=\"index.php?category=products_manager&amp;action=products_export\"><img class=\"pull-right\" width=\"32\" src=\"";
-        // line 64
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("vendor/images/icons/default.png"), "html", null, true);
-        echo "\"><h3 class=\"h3-tile\">Export or Import</h3>
-\t</a></div>
 <div class=\"clear\"></div>
 <br>
 <h3 class=\"no-margin\">My Products</h3>
@@ -118,7 +106,7 @@ class __TwigTemplate_8a990e3ba95d533d79dbb048a741c310504e72cfffab708401add717fef
 \t
 <div class=\"pull-right\" style=\"position:relative;top:-10px\">
     ";
-        // line 76
+        // line 70
         echo $this->env->getExtension('actions')->renderUri($this->env->getExtension('http_kernel')->controller("TMallVendorBundle:produit:recherche"), array());
         echo "  
     
@@ -141,43 +129,43 @@ class __TwigTemplate_8a990e3ba95d533d79dbb048a741c310504e72cfffab708401add717fef
         </thead>
         <tbody>
         ";
-        // line 96
+        // line 90
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
         foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
-            // line 97
+            // line 91
             echo "            <tr bgcolor=\"#ffffff\">
                 <td><input title=\"catalogAdd\" type=\"checkbox\" name=\"CheckList[]\" value=\"";
-            // line 98
+            // line 92
             echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "id", array()), "html", null, true);
             echo "\" ></td>
                 <td>";
-            // line 99
+            // line 93
             echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "titre", array()), "html", null, true);
             echo "</td>
                 <td><a href=\"";
-            // line 100
+            // line 94
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl((("" . $this->getAttribute($this->getAttribute($context["entity"], "photo", array()), "path", array())) . "")), "html", null, true);
             echo "\" class=\"hover\"><img src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl((("" . $this->getAttribute($this->getAttribute($context["entity"], "photo", array()), "path", array())) . "")), "html", null, true);
             echo "\" width=\"100\" height=\"60\"></a></td>
                 <td>";
-            // line 101
+            // line 95
             echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "prix", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 102
+            // line 96
             echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "quantity", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 103
+            // line 97
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["entity"], "category", array()), "nom", array()), "html", null, true);
             echo "</td>
                 
                 
                     
                 <td><a href=\"";
-            // line 107
+            // line 101
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("produit_show", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
             echo "\"><img src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("vendor/images/icons/options_add.png"), "html", null, true);
@@ -185,7 +173,7 @@ class __TwigTemplate_8a990e3ba95d533d79dbb048a741c310504e72cfffab708401add717fef
                     
                    
                     <td><a href=\"";
-            // line 110
+            // line 104
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("produit_edit", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
             echo "\"><img src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("vendor/images/edit-icon.gif"), "html", null, true);
@@ -199,15 +187,15 @@ class __TwigTemplate_8a990e3ba95d533d79dbb048a741c310504e72cfffab708401add717fef
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 115
+        // line 109
         echo "                                                                
         </tbody>
     </table>
         ";
-        // line 119
+        // line 113
         echo "        <div class=\"navigation\">
     ";
-        // line 120
+        // line 114
         echo $this->env->getExtension('knp_pagination')->render($this->env, (isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
         echo "
       </div>
@@ -234,7 +222,7 @@ class __TwigTemplate_8a990e3ba95d533d79dbb048a741c310504e72cfffab708401add717fef
 
     public function getDebugInfo()
     {
-        return array (  211 => 120,  208 => 119,  203 => 115,  189 => 110,  181 => 107,  174 => 103,  170 => 102,  166 => 101,  160 => 100,  156 => 99,  152 => 98,  149 => 97,  145 => 96,  122 => 76,  107 => 64,  103 => 63,  95 => 57,  92 => 56,  52 => 20,  43 => 14,  32 => 5,  29 => 4,  11 => 1,);
+        return array (  199 => 114,  196 => 113,  191 => 109,  177 => 104,  169 => 101,  162 => 97,  158 => 96,  154 => 95,  148 => 94,  144 => 93,  140 => 92,  137 => 91,  133 => 90,  110 => 70,  93 => 55,  90 => 54,  52 => 20,  43 => 14,  32 => 5,  29 => 4,  11 => 1,);
     }
 }
 /* {% extends "TMallVendorBundle::layout.html.twig" %}*/
@@ -262,9 +250,7 @@ class __TwigTemplate_8a990e3ba95d533d79dbb048a741c310504e72cfffab708401add717fef
 /* <li class="dropdown"><a class="main-top-link" href="">Profile</a>*/
 /* */
 /* </li>*/
-/* <li class="dropdown"><a class="main-top-link" href="">????</a>*/
 /* */
-/* </li>*/
 /* */
 /* */
 /* */
@@ -298,10 +284,6 @@ class __TwigTemplate_8a990e3ba95d533d79dbb048a741c310504e72cfffab708401add717fef
 /* 	*/
 /* 	<div id="main_content" class="text-left col-md-12 min-height-300">*/
 /* 		*/
-/* 		<div class="fright">*/
-/* 	<a class="small-tile green-back" href="index.php?category=products_manager&amp;action=products_add"><img class="pull-right" width="32" src="{{asset('vendor/images/icons/products_add.png')}}"><h3 class="h3-tile">Add New Product</h3>*/
-/* 	</a><a class="small-tile lila-back" href="index.php?category=products_manager&amp;action=products_export"><img class="pull-right" width="32" src="{{asset('vendor/images/icons/default.png')}}"><h3 class="h3-tile">Export or Import</h3>*/
-/* 	</a></div>*/
 /* <div class="clear"></div>*/
 /* <br>*/
 /* <h3 class="no-margin">My Products</h3>*/
